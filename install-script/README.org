@@ -1,7 +1,0 @@
-#+title: ch1ebak's scripts
-
-* Post-install script
-This is my post-install script for Arch-based systems. Version 1 uses both Pacman and Paru, Version 2 has been simplified by using only Paru.
-It's very simple - this is my very first script ever.
-
-2024-09-20 - currently broken as Paru doesn't work, but I don't want to change it to use the -git package.
