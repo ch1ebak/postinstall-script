@@ -1,1 +1,0 @@
-/ssd/Projekty/skrypty/install-script/post-install.sh
