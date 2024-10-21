@@ -65,7 +65,7 @@ cd paru
 makepkg -si
 paru -S --needed $LIST_OF_APPS
 cd ..
-trash -v /home/$USER/recent/paru
+trash -v paru
                                                                                               
 # DOTFILES
 echo -e "
@@ -77,6 +77,7 @@ echo -e "
                                                                                               
 "
                                                                                               
+cd ~
 git clone https://github.com/ch1ebak/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles
