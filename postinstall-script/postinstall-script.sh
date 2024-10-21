@@ -108,6 +108,7 @@ echo -e "
 "
 
 cd ~
+trash .config/qtile .bashrc .Xresources
 git clone https://github.com/ch1ebak/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles
