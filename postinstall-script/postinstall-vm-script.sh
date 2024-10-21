@@ -83,7 +83,7 @@ git clone https://github.com/ch1ebak/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles
 mv config .config
-stow .
+stow . --adopt
 cd ..
                                                                                               
 # FINISHING TOUCHES
