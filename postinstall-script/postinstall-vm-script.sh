@@ -45,6 +45,7 @@ python-pip
 python-psutil
 qtile
 ripgrep
+rofi
 stow
 thunar
 trash-cli

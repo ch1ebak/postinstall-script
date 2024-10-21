@@ -68,6 +68,7 @@ python-psutil
 qbittorrent
 qtile
 ripgrep
+rofi
 slock
 spicetify-cli
 spotify-launcher
