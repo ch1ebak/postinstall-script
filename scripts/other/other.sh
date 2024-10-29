@@ -11,8 +11,6 @@ echo -e "
 
 LIST_OF_APPS="
 calibre
-fastfetch
-feh
 ferdium-bin
 gimp
 keepassxc
@@ -21,7 +19,6 @@ qbittorrent
 spicetify-cli
 spotify-launcher
 yt-dlp
-xdg-utils
 "
 
 paru -S --needed $LIST_OF_APPS

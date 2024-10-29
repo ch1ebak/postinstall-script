@@ -18,7 +18,9 @@ btop
 cantarell-fonts
 capitaine-cursors
 dunst
+fastfetch
 file-roller
+feh
 fzf
 git
 gvfs
@@ -40,6 +42,7 @@ ttf-font-awesome
 ttf-jetbrains-mono-nerd
 wget
 zen-browser-bin
+xdg-utils
 zoxide"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
