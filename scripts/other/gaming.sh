@@ -1,9 +1,18 @@
 #!/bin/bash
 
+echo -e "
+                                
+ ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖
+▐▌   ▐▌ ▐▌▐▛▚▞▜▌  █  ▐▛▚▖▐▌▐▌   
+▐▌▝▜▌▐▛▀▜▌▐▌  ▐▌  █  ▐▌ ▝▜▌▐▌▝▜▌
+▝▚▄▞▘▐▌ ▐▌▐▌  ▐▌▗▄█▄▖▐▌  ▐▌▝▚▄▞▘
+                                
+"
+
 LIST_OF_APPS="
 lib32-nvidia-utils
 lib32-vulkan-icd-loader
-nvidia-dkms
+nvidia-open-dkms
 nvidia-settings
 nvidia-utils
 lutris

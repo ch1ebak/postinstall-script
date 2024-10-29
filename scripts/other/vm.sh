@@ -1,8 +1,17 @@
 #!/bin/bash
 
+echo -e "
+                      
+▗▄▄▄▖ ▗▄▄▄▖▗▖  ▗▖▗▖ ▗▖
+▐▌ ▐▌ ▐▌   ▐▛▚▞▜▌▐▌ ▐▌
+▐▌ ▐▌ ▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌
+▐▙▄▟▙▖▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘
+                      
+"
+
 LIST_OF_APPS="
 dmidecode
-dsnmasq
+dnsmasq
 iptables-nft
 libvirt
 qemu-base

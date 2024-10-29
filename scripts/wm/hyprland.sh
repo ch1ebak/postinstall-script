@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo -e "
+                                          
+▗▖ ▗▖▗▖  ▗▖▗▄▄▖ ▗▄▄▖ ▗▖    ▗▄▖ ▗▖  ▗▖▗▄▄▄ 
+▐▌ ▐▌ ▝▚▞▘ ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌▐▛▚▖▐▌▐▌  █
+▐▛▀▜▌  ▐▌  ▐▛▀▘ ▐▛▀▚▖▐▌   ▐▛▀▜▌▐▌ ▝▜▌▐▌  █
+▐▌ ▐▌  ▐▌  ▐▌   ▐▌ ▐▌▐▙▄▄▖▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀
+                                          
+"
+
 LIST_OF_APPS="
 egl-wayland
 hypridle
@@ -10,4 +19,4 @@ qt5-wayland
 rofi-wayland
 waybar"
 
-paru -S $LIST_OF_APPS
+paru -S --needed $LIST_OF_APPS
