@@ -1,4 +1,14 @@
-#+title: ch1ebak's scripts
+#+title: ch1ebak's postinstall script
 
-* Post-install script
-It's very simple - this is my very first script ever.
+Scripts:
+- install core packages
+- download and set up of my dotfiles
+- scripts that speed up the installation of:
+  - qtile
+  - hyprland
+  - neovim
+  - emacs
+  - gaming related packages
+  - virt-manager
+  - other packages i use
+
