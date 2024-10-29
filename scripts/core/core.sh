@@ -38,6 +38,7 @@ ripgrep
 stow
 thunar
 trash-cli
+tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 wget
