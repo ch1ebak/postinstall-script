@@ -20,3 +20,4 @@ mv Xresources .Xresources
 stow . --adopt
 cd /home/$USER/
 trash -v /home/$USER/.bash_profile
+chmod +x /home/$USER/.dotfiles/.config/rofi/modules/rofi-power-menu
