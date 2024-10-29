@@ -17,37 +17,37 @@ chmod -R +x scripts/*
 
 install_qtile () {
     echo "Setting up $opt"
-    ./wm/qtile.sh
+    ./scripts/wm/qtile.sh
 }
 
 install_hyprland () {
     echo "Setting up $opt"
-    ./wm/hyprland.sh
+    ./scripts/wm/hyprland.sh
 }
 
 install_emacs () {
     echo "Setting up $opt"
-    ./editors/emacs.sh
+    ./scripts/editors/emacs.sh
 }
 
 install_neovim () {
     echo "Setting up $opt"
-    ./editors/neovim.sh
+    ./scripts/editors/neovim.sh
 }
 
 install_other () {
     echo "Setting up $opt"
-    ./other/other.sh
+    ./scripts/other/other.sh
 }
 
 install_gaming () {
     echo "Setting up $opt"
-    ./other/gaming.sh
+    ./scripts/other/gaming.sh
 }
 
 install_vm () {
     echo "Setting up $opt"
-    ./other/vm.sh
+    ./scripts/other/vm.sh
 }
 
 while true; do
