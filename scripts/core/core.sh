@@ -26,6 +26,7 @@ gvfs-mtp
 linux-headers
 network-manager-applet
 networkmanager
+nordic-darker-theme
 nvidia-open-dkms
 nvidia-settings
 nvtop
@@ -37,8 +38,6 @@ thunar
 trash-cli
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
-ttf-nerd-fonts-symbols
-ttf-nerd-fonts-symbols-common
 wget
 zen-browser-bin
 zoxide"
