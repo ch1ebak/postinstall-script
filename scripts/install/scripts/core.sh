@@ -17,6 +17,7 @@ brightnessctl
 btop
 cantarell-fonts
 capitaine-cursors
+duf
 dunst
 fastfetch
 file-roller
