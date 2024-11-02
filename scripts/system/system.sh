@@ -18,7 +18,7 @@ cleanup () {
 }
 
 while true; do
-    options=("Update System" "System Cleanup" "Quit")
+    options=("Update System" "System Cleanup" "Back")
 
     echo "Choose an option: "
     select opt in "${options[@]}"; do

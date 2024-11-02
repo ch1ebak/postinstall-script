@@ -30,7 +30,7 @@ remove_vm () {
 }
 
 while true; do
-    options=("Remove Qtile" "Remove Hyprland" "Remove Neovim" "Remove Emacs" "Remove Virt-Manager" "Quit")
+    options=("Remove Qtile" "Remove Hyprland" "Remove Neovim" "Remove Emacs" "Remove Virt-Manager" "Back")
 
     echo "Choose and option: "
     select opt in "${options[@]}"; do
