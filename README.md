@@ -1,6 +1,4 @@
----
-title: ch1ebak's postinstall script
----
+# ch1ebak's postinstall script
 
 a collection of simple scripts:
 - installs packages
