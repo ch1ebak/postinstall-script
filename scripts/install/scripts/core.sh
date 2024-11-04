@@ -40,6 +40,7 @@ ripgrep
 stow
 thunar
 trash-cli
+ttf-atkinson-hyperlegible
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 wget
