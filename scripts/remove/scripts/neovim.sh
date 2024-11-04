@@ -10,6 +10,7 @@ echo -e "
 "
 
 LIST_OF_APPS="
+lazygit
 neovim
 ueberzugpp
 yazi

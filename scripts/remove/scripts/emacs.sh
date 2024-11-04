@@ -13,6 +13,7 @@ LIST_OF_APPS="
 emacs-nativecomp
 hunspell-pl
 hunspell-en_us
+pandoc-bin
 "
 
 paru -Rns $LIST_OF_APPS

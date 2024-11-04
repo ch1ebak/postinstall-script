@@ -23,7 +23,7 @@ killall -e dunst & sleep 1; dunstify "Theme switched to Spacegray" &
 
 # neovim
 sed -i "s@colorscheme\ *.*@colorscheme nordic'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
-sed -i "s@theme\ =\ *.*@theme\ =\ 'nord',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
+sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.spacegray\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py

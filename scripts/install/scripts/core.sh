@@ -23,6 +23,7 @@ file-roller
 feh
 fzf
 git
+github-cli
 gvfs
 gvfs-mtp
 linux-headers
@@ -38,7 +39,6 @@ ripgrep
 stow
 thunar
 trash-cli
-tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 wget
