@@ -14,9 +14,6 @@ trash .config/qtile .bashrc .Xresources
 git clone https://github.com/ch1ebak/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles
-mv config .config
-mv bashrc .bashrc
-mv Xresources .Xresources
 stow . --adopt
 cd /home/$USER/
 trash -v /home/$USER/.bash_profile
