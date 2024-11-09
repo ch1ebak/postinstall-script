@@ -21,9 +21,8 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#E6E6E6"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#5AF78E"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Dracula" &
 
-# neovim
-sed -i "s@colorscheme\ *.*@colorscheme dracula'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
-sed -i "s@theme\ =\ *.*@theme\ =\ 'dracula-nvim',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
+# emacs
+sed -i "s@load-theme\ '*.*@load-theme\ 'doom-dracula\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.dracula\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py

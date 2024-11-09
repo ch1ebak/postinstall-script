@@ -21,9 +21,8 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#ebdbb2"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#98971a"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Gruvbox" &
 
-# neovim
-sed -i "s@colorscheme\ *.*@colorscheme gruvbox'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
-sed -i "s@theme\ =\ *.*@theme\ =\ 'gruvbox',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
+# emacs
+sed -i "s@load-theme\ '*.*@load-theme\ 'doom-gruvbox\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.gruvbox\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py

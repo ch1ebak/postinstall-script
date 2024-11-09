@@ -11,13 +11,6 @@ echo -e "
 
 LIST_OF_APPS="
 emacs-nativecomp
-hunspell-pl
-hunspell-en_us
-pandoc-bin
 "
 
 paru -S --needed $LIST_OF_APPS
-cd /home/$USER/.dotfiles/backups
-mv /home/$USER/.dotfiles/backups/emacs /home/$USER/.dotfiles/.config/emacs
-cd /home/$USER/.dotfiles
-stow . --adopt
