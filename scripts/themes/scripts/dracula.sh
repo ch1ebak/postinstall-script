@@ -22,7 +22,9 @@ sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#5AF78E"@g' /home/$USER/.dotfil
 killall -e dunst & sleep 1; dunstify "Theme switched to Dracula" &
 
 # emacs
-sed -i "s@load-theme\ '*.*@load-theme\ 'doom-dracula\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "/load-theme\ 'catppuccin*.*/s/^/;/g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "/load-theme\ 'doom-*.*/s/^;//g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "s@load-theme\ 'doom-*.*@load-theme\ 'doom-dracula\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.dracula\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py

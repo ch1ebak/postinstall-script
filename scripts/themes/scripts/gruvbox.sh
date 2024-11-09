@@ -22,7 +22,9 @@ sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#98971a"@g' /home/$USER/.dotfil
 killall -e dunst & sleep 1; dunstify "Theme switched to Gruvbox" &
 
 # emacs
-sed -i "s@load-theme\ '*.*@load-theme\ 'doom-gruvbox\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "/load-theme\ 'catppuccin*.*/s/^/;/g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "/load-theme\ 'doom-*.*/s/^;//g" /home/$USER/.dotfiles/.config/emacs/config.org
+sed -i "s@load-theme\ 'doom-*.*@load-theme\ 'doom-gruvbox\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.gruvbox\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
