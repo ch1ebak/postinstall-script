@@ -9,9 +9,6 @@ echo -e "
                                                   
 "
 
-# alacritty
-sed -i 's@themes/*.*@themes/catppuccin.toml"@g' /home/$USER/.dotfiles/.config/alacritty/alacritty.toml
-
 # btop
 sed -i 's@themes/*.*@themes/catppuccin.theme"@g' /home/$USER/.dotfiles/.config/btop/btop.conf
 
@@ -40,6 +37,9 @@ spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-catppuccin.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
+
+# Wezterm
+sed -i "s/color_scheme*.*/color_scheme\ =\ 'Catppuccin\ Mocha'/g" /home/$USER/.config/wezterm/wezterm.lua
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/catppuccin"@g' /home/$USER/.dotfiles/.Xresources

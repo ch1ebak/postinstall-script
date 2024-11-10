@@ -11,7 +11,6 @@ echo -e "
 
 LIST_OF_APPS="
 acpilight
-alacritty
 alsa-utils
 brightnessctl
 btop
@@ -42,6 +41,7 @@ thunar
 trash-cli
 ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
+wezterm
 wget
 zen-browser-bin
 xdg-utils

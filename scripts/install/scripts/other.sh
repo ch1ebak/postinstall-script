@@ -21,7 +21,6 @@ mpv
 qbittorrent
 spicetify-cli
 spotify-launcher
-ueberzugpp
 yazi
 yt-dlp
 "

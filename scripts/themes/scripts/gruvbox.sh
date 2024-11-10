@@ -9,9 +9,6 @@ echo -e "
                                      
 "
 
-# alacritty
-sed -i 's@themes/*.*@themes/gruvbox.toml"@g' /home/$USER/.dotfiles/.config/alacritty/alacritty.toml
-
 # btop
 sed -i 's@themes/*.*@themes/gruvbox_dark.theme"@g' /home/$USER/.dotfiles/.config/btop/btop.conf
 
@@ -40,6 +37,9 @@ spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-gruvbox.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
+
+# Wezterm
+sed -i "s/color_scheme*.*/color_scheme\ =\ 'GruvboxDark'/g" /home/$USER/.config/wezterm/wezterm.lua
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresources
