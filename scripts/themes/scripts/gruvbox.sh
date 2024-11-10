@@ -39,7 +39,7 @@ spicetify apply
 sed -i 's@assets/*.*@assets/style-gruvbox.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
 
 # Wezterm
-sed -i "s/color_scheme*.*/color_scheme\ =\ 'GruvboxDark'/g" /home/$USER/.config/wezterm/wezterm.lua
+sed -i "s/color_scheme*.*/color_scheme\ =\ 'GruvboxDark',/g" /home/$USER/.config/wezterm/wezterm.lua
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresources
