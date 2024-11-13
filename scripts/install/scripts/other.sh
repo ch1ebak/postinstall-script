@@ -17,7 +17,6 @@ keepassxc
 languagetool
 lazygit
 mpv
-obsidian
 qbittorrent
 spicetify-cli
 spotify-launcher
