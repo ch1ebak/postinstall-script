@@ -13,11 +13,11 @@ LIST_OF_APPS="
 calibre
 ferdium-bin
 gimp
-hunspell-pl
-hunspell-en_us
 keepassxc
+languagetool
 lazygit
 mpv
+obsidian
 qbittorrent
 spicetify-cli
 spotify-launcher

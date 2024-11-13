@@ -39,6 +39,7 @@ ripgrep
 stow
 thunar
 trash-cli
+ttf-ancient-fonts
 ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
 wezterm
