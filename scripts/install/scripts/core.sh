@@ -14,19 +14,26 @@ acpilight
 alsa-utils
 brightnessctl
 btop
+calibre
 cantarell-fonts
 capitaine-cursors
 duf
 dunst
 fastfetch
-file-roller
+ferdium-bin
 feh
+file-roller
 fzf
 git
 github-cli
+gimp
 gvfs
 gvfs-mtp
+keepassxc
+languagetool
+lazygit
 linux-headers
+mpv
 network-manager-applet
 networkmanager
 nordic-darker-theme
@@ -35,7 +42,11 @@ nvidia-settings
 nvtop
 nwg-look
 papirus-icon-theme
+qbittorrent
 ripgrep
+sddm
+spicetify-cli
+spotify-launcher
 stow
 thunar
 trash-cli
@@ -46,6 +57,8 @@ wezterm
 wget
 zen-browser-bin
 xdg-utils
+yazi
+yt-dlp
 zoxide"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
