@@ -1,12 +1,12 @@
 #!/bin/bash
 
 echo -e "
-                                
- ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖
-▐▌   ▐▌ ▐▌▐▛▚▞▜▌  █  ▐▛▚▖▐▌▐▌   
-▐▌▝▜▌▐▛▀▜▌▐▌  ▐▌  █  ▐▌ ▝▜▌▐▌▝▜▌
-▝▚▄▞▘▐▌ ▐▌▐▌  ▐▌▗▄█▄▖▐▌  ▐▌▝▚▄▞▘
-                                
+                              
+▗▖   ▗▖ ▗▖▗▄▄▄▖▗▄▄▖ ▗▄▄▄▖ ▗▄▄▖
+▐▌   ▐▌ ▐▌  █  ▐▌ ▐▌  █  ▐▌   
+▐▌   ▐▌ ▐▌  █  ▐▛▀▚▖  █   ▝▀▚▖
+▐▙▄▄▖▝▚▄▞▘  █  ▐▌ ▐▌▗▄█▄▖▗▄▄▞▘
+                              
 "
 
 LIST_OF_APPS="
@@ -16,9 +16,6 @@ nvidia-open-dkms
 nvidia-settings
 nvidia-utils
 lutris
-proton-ge-custom-bin
-protontricks
-steam
 vulkan-icd-loader
 wine-staging"
 
