@@ -10,11 +10,11 @@ echo -e "
 "
 
 update () {
-  ./scripts/system/scripts/update.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/system/scripts/update.sh)
 }
 
 cleanup () {
-  ./scripts/system/scripts/cleanup.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/system/scripts/cleanup.sh)
 }
 
 while true; do

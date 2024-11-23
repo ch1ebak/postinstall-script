@@ -10,23 +10,23 @@ echo -e "
 "
 
 remove_qtile () {
-  ./scripts/remove/scripts/qtile.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/scripts/qtile.sh)
 }
 
 remove_hyprland () {
-  ./scripts/remove/scripts/hyprland.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/scripts/hyprland.sh)
 }
 
 remove_neovim () {
-  ./scripts/remove/scripts/neovim.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/scripts/neovim.sh)
 }
 
 remove_emacs () {
-  ./scripts/remove/scripts/emacs.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/scripts/emacs.sh)
 }
 
 remove_vm () {
-  ./scripts/remove/scripts/vm.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/scripts/vm.sh)
 }
 
 while true; do

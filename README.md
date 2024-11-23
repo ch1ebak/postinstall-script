@@ -21,3 +21,8 @@ a collection of simple scripts:
   - gruvbox
   - spacegray
   - tokyo night
+
+# usage
+```
+bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/postinstall.sh)
+```

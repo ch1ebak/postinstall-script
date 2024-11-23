@@ -10,39 +10,39 @@ echo -e "
 "
 
 install_core () {
-  ./scripts/install/scripts/core.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/core.sh)
 }
 
 dotfiles () {
-  ./scripts/install/scripts/dotfiles.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/dotfiles.sh)
 }
 
 install_qtile () {
-  ./scripts/install/scripts/qtile.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/qtile.sh)
 }
 
 install_hyprland () {
-  ./scripts/install/scripts/hyprland.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/hyprland.sh)
 }
 
 install_neovim () {
-  ./scripts/install/scripts/neovim.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/neovim.sh)
 }
 
 install_emacs () {
-  ./scripts/install/scripts/emacs.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/emacs.sh)
 }
 
 install_steam () {
-  ./scripts/install/scripts/steam.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/steam.sh)
 }
 
 install_lutris () {
-  ./scripts/install/scripts/lutris.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/lutris.sh)
 }
 
 install_vm () {
-  ./scripts/install/scripts/vm.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/vm.sh)
 }
 
 while true; do

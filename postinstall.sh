@@ -12,19 +12,19 @@ I sure hope it works!
 "
 
 install () {
-  ./scripts/install/install.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/install.sh)
 }
 
 remove () {
-  ./scripts/remove/remove.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/remove/remove.sh)
 }
 
 system () {
-  ./scripts/system/system.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/system/system.sh)
 }
 
 themes () {
-  ./scripts/themes/themes.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/themes.sh)
 }
 
 while true; do

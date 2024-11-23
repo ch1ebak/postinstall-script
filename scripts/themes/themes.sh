@@ -10,28 +10,23 @@ echo -e "
 "
 
 catppuccin () {
-  echo "Changing theme to $opt"
-  ./scripts/themes/scripts/catppuccin.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/catppuccin.sh)
 }
 
 dracula () {
-  echo "Changing theme to $opt"
-  ./scripts/themes/scripts/dracula.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/dracula.sh)
 }
 
 gruvbox () {
-  echo "Changing theme to $opt"
-  ./scripts/themes/scripts/gruvbox.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/gruvbox.sh)
 }
 
 spacegray () {
-  echo "Changing theme to $opt"
-  ./scripts/themes/scripts/spacegray.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/spacegray.sh)
 }
 
 tokyonight () {
-  echo "Changing theme to $opt"
-  ./scripts/themes/scripts/tokyonight.sh
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/tokyonight.sh)
 }
 
 while true; do
