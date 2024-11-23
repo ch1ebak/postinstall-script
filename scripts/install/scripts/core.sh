@@ -44,7 +44,6 @@ nwg-look
 papirus-icon-theme
 qbittorrent
 ripgrep
-sddm
 smartmontools
 spicetify-cli
 spotify-launcher
