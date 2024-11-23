@@ -28,6 +28,7 @@ github-cli
 gimp
 gvfs
 gvfs-mtp
+iwd
 kitty
 keepassxc
 lazygit
@@ -44,6 +45,7 @@ papirus-icon-theme
 qbittorrent
 ripgrep
 sddm
+smartmontools
 spicetify-cli
 spotify-launcher
 stow
@@ -56,6 +58,11 @@ wget
 zen-browser-bin
 xdg-utils
 yt-dlp
+openssh
+wget
+wireless_tools
+wpa_supplicant
+xdg-utils
 zoxide"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
