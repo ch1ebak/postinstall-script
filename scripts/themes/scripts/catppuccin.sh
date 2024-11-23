@@ -18,9 +18,12 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#cdd6f4"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#cba6f7"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Catppuccin" &
 
-# emacs
-sed -i "/load-theme\ 'doom-*.*/s/^/;/g" /home/$USER/.dotfiles/.config/emacs/config.org
-sed -i "/load-theme\ 'catppuccin*.*/s/^;//g" /home/$USER/.dotfiles/.config/emacs/config.org
+# kitty
+sed -i 's@themes/*.*@themes/catppuccin.conf@g' /home/$USER/.dotfiles/.config/kitty/kitty.conf
+
+# neovim
+sed -i "s@colorscheme\ *.*@colorscheme catppuccin'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
+sed -i "s@theme\ =\ *.*@theme\ =\ 'catppuccin',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.catppuccin\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
@@ -37,9 +40,6 @@ spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-catppuccin.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
-
-# Wezterm
-sed -i "s/color_scheme*.*/color_scheme\ =\ 'Catppuccin\ Mocha',/g" /home/$USER/.config/wezterm/wezterm.lua
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/catppuccin"@g' /home/$USER/.dotfiles/.Xresources

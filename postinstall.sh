@@ -11,8 +11,6 @@ I sure hope it works!
                                                                                               
 "
 
-chmod -R +x scripts/*
-
 install () {
   ./scripts/install/install.sh
 }

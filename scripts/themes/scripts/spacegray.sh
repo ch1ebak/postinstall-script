@@ -18,10 +18,12 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#b3b8c3"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#b04b57"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Spacegray" &
 
-# Emacs
-sed -i "/load-theme\ 'catppuccin*.*/s/^/;/g" /home/$USER/.dotfiles/.config/emacs/config.org
-sed -i "/load-theme\ 'doom-*.*/s/^;//g" /home/$USER/.dotfiles/.config/emacs/config.org
-sed -i "s@load-theme\ 'doom-*.*@load-theme\ 'doom-spacegrey\ t)@g" /home/$USER/.dotfiles/.config/emacs/config.org
+# kitty
+sed -i 's@themes/*.*@themes/spacegray.conf@g' /home/$USER/.dotfiles/.config/kitty/kitty.conf
+
+# neovim
+sed -i "s@colorscheme\ *.*@colorscheme nordic'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
+sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
 # qtile
 sed -i 's/themes.*\ import\ colors/themes.spacegray\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
@@ -38,9 +40,6 @@ spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-spacegray.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
-
-# Wezterm
-sed -i "s/color_scheme*.*/color_scheme\ =\ 'SpaceGray',/g" /home/$USER/.config/wezterm/wezterm.lua
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/spacegray"@g' /home/$USER/.dotfiles/.Xresources

@@ -17,7 +17,6 @@ btop
 calibre
 cantarell-fonts
 capitaine-cursors
-duf
 dunst
 fastfetch
 ferdium-bin
@@ -29,8 +28,8 @@ github-cli
 gimp
 gvfs
 gvfs-mtp
+kitty
 keepassxc
-languagetool
 lazygit
 linux-headers
 mpv
@@ -53,11 +52,9 @@ trash-cli
 ttf-ancient-fonts
 ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
-wezterm
 wget
 zen-browser-bin
 xdg-utils
-yazi
 yt-dlp
 zoxide"
                                                                                               
