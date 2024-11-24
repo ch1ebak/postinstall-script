@@ -19,3 +19,4 @@ virt-manager
 "
 
 paru -S --needed $LIST_OF_APPS
+systemctl --enable libvirtd
