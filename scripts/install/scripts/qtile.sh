@@ -18,6 +18,7 @@ rofi
 slock
 xclip
 xorg-server
+xorg-xbacklight
 xorg-xinit
 xorg-xkill
 xorg-xrandr

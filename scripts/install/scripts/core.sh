@@ -10,9 +10,7 @@ echo -e "
 "
 
 LIST_OF_APPS="
-acpilight
 alsa-utils
-brightnessctl
 btop
 calibre
 cantarell-fonts
@@ -25,7 +23,6 @@ file-roller
 fzf
 git
 github-cli
-gimp
 gvfs
 gvfs-mtp
 iwd
@@ -41,8 +38,10 @@ nvidia-open-dkms
 nvidia-settings
 nvtop
 nwg-look
+obsidian
 papirus-icon-theme
 qbittorrent
+rawtherapee
 ripgrep
 smartmontools
 spicetify-cli
