@@ -47,6 +47,7 @@ smartmontools
 spicetify-cli
 spotify-launcher
 stow
+syncthing
 thunar
 trash-cli
 ttf-ancient-fonts
