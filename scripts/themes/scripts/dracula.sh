@@ -19,7 +19,7 @@ sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#5AF78E"@g' /home/$USER/.dotfil
 killall -e dunst & sleep 1; dunstify "Theme switched to Dracula" &
 
 # ghostty
-sed -i 's@themes/*.*@themes/dracula@g' /home/$USER/.dotfiles/.config/ghosty/config
+sed -i 's@themes/*.*@themes/Dracula@g' /home/$USER/.dotfiles/.config/ghostty/config
 
 # neovim
 sed -i "s@colorscheme\ *.*@colorscheme dracula'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
