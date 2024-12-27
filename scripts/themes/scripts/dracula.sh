@@ -18,8 +18,8 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#E6E6E6"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#5AF78E"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Dracula" &
 
-# kitty
-sed -i 's@themes/*.*@themes/dracula.conf@g' /home/$USER/.dotfiles/.config/kitty/kitty.conf
+# ghostty
+sed -i 's@themes/*.*@themes/dracula@g' /home/$USER/.dotfiles/.config/ghosty/config
 
 # neovim
 sed -i "s@colorscheme\ *.*@colorscheme dracula'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
@@ -32,11 +32,6 @@ qtile cmd-obj -o cmd -f reload_config
 
 # rofi
 sed -i 's@themes/*.*@themes/dracula"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
-
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme Dracula
-spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-dracula.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html

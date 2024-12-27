@@ -18,8 +18,8 @@ sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#ebdbb2"@g' /home/$USER/.dotfiles
 sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#98971a"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to Gruvbox" &
 
-# kitty
-sed -i 's@themes/*.*@themes/gruvbox.conf@g' /home/$USER/.dotfiles/.config/kitty/kitty.conf
+# ghostty
+sed -i 's@themes/*.*@themes/GruvboxDark@g' /home/$USER/.dotfiles/.config/ghosty/config
 
 # neovim
 sed -i "s@colorscheme\ *.*@colorscheme gruvbox'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
@@ -32,11 +32,6 @@ qtile cmd-obj -o cmd -f reload_config
 
 # rofi
 sed -i 's@themes/*.*@themes/gruvbox"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
-
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme Gruvbox
-spicetify apply
 
 # Startpage
 sed -i 's@assets/*.*@assets/style-gruvbox.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
