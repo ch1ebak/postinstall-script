@@ -10,7 +10,6 @@ echo -e "
 "
 
 LIST_OF_APPS="
-alsa-utils
 btop
 calibre
 cantarell-fonts
@@ -38,16 +37,20 @@ nvidia-open-dkms
 nvidia-settings
 nvtop
 nwg-look
+obsidian
 papirus-icon-theme
+pavucontrol
 qbittorrent
 ripgrep
 smartmontools
 stow
+syncthing
 thunar
 trash-cli
 ttf-ancient-fonts
 ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
+volumeicon
 wget
 zen-browser-bin
 xdg-utils
