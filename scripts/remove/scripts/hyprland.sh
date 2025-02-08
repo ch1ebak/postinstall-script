@@ -15,7 +15,6 @@ hyprland
 hyprlock
 hyprpaper
 qt5-wayland
-rofi-wayland
 waybar"
 
 paru -S rofi
