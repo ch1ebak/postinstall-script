@@ -10,6 +10,7 @@ echo -e "
 "
 
 LIST_OF_APPS="
+brightnessctl
 egl-wayland
 hypridle
 hyprland
@@ -19,6 +20,7 @@ qt5-wayland
 rofi-wayland
 waybar"
 
+paru -Rns xorg-xbacklight
 paru -S --needed $LIST_OF_APPS
 cd /home/$USER/.dotfiles/backups
 mv /home/$USER/.dotfiles/backups/hypr /home/$USER/.dotfiles/.config/hypr
