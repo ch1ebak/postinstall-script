@@ -34,7 +34,7 @@ tokyonight () {
 }
 
 while true; do
-    options=("Catppuccin" "Dracula" "Gruvbox" "Spacegray" "Tokyo Night" "Back")
+    options=("Catppuccin" "Dracula" "Gruvbox" "Kanagawa" "Spacegray" "Tokyo Night" "Back")
 
     echo "Choose an option: "
     select opt in "${options[@]}"; do
