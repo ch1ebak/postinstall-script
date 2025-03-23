@@ -31,6 +31,11 @@ sed -i 's@themes/*.*@themes/gruvbox"@g' /home/$USER/.dotfiles/.config/rofi/confi
 # Startpage
 sed -i 's@assets/*.*@assets/style-gruvbox.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
 
+# spicetify
+spicetify config current_theme text
+spicetify config color_scheme Gruvbox
+spicetify apply
+
 # Xresources
 sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
@@ -43,10 +48,10 @@ sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' /home/$USER/.dotfiles/.config/hyp
 
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-killall -e hyprpaper & sleep 1; hyprpaper &
+nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
 ## waybar
 sed -i 's@themes/*.*@themes/gruvbox.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-killall waybar && waybar & disown
+nohup bash -c "killall waybar && waybar & disown"
 
 echo -e "Gruvbox"

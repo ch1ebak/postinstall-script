@@ -31,6 +31,11 @@ sed -i 's@themes/*.*@themes/tokyonight"@g' /home/$USER/.dotfiles/.config/rofi/co
 # Startpage
 sed -i 's@assets/*.*@assets/style-tokyonight.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
 
+# spicetify
+spicetify config current_theme text
+spicetify config color_scheme TokyoNight
+spicetify apply
+
 # Xresources
 sed -i 's@xresources/*.*@xresources/tokyonight"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
@@ -43,10 +48,10 @@ sed -i 's@color*.*@color\ =\ rgba(24283bff)@g' /home/$USER/.dotfiles/.config/hyp
 
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/tokyonight.jpg@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-killall -e hyprpaper & sleep 1; hyprpaper &
+nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
 ## waybar
 sed -i 's@themes/*.*@themes/tokyonight.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-killall waybar && waybar & disown
+nohup bash -c "killall waybar && waybar & disown"
 
 echo -e "Tokyo Night"

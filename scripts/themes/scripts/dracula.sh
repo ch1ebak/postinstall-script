@@ -31,6 +31,11 @@ sed -i 's@themes/*.*@themes/dracula"@g' /home/$USER/.dotfiles/.config/rofi/confi
 # Startpage
 sed -i 's@assets/*.*@assets/style-dracula.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
 
+# spicetify
+spicetify config current_theme text
+spicetify config color_scheme Dracula
+spicetify apply
+
 # Xresources
 sed -i 's@xresources/*.*@xresources/dracula"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
@@ -43,10 +48,10 @@ sed -i 's@color*.*@color\ =\ rgba(3D3F4Aff)@g' /home/$USER/.dotfiles/.config/hyp
 
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/dracula.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-killall -e hyprpaper & sleep 1; hyprpaper &
+nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
 ## waybar
 sed -i 's@themes/*.*@themes/dracula.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-killall waybar && waybar & disown
+nohup bash -c "killall waybar && waybar & disown"
 
 echo -e "Dracula"
