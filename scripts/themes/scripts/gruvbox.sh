@@ -25,11 +25,6 @@ sed -i 's@themes/*.*@themes/GruvboxDark@g' /home/$USER/.dotfiles/.config/ghostty
 sed -i "s@colorscheme\ *.*@colorscheme gruvbox'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
 sed -i "s@theme\ =\ *.*@theme\ =\ 'gruvbox',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
-# qtile
-sed -i 's/themes.*\ import\ colors/themes.gruvbox\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-sed -i 's@wallpapers/*.*@wallpapers/gruvbox.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-qtile cmd-obj -o cmd -f reload_config
-
 # rofi
 sed -i 's@themes/*.*@themes/gruvbox"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
@@ -39,3 +34,17 @@ sed -i 's@assets/*.*@assets/style-gruvbox.css"\ rel="stylesheet" />@g' /ssd/Proj
 # Xresources
 sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
+
+# hyprland
+## hyprland
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(98971aff)@g' hyprland.conf
+sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(504945ff)@g' hyprland.conf
+sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' hyprland.conf
+
+## hyprpaper
+sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' hyprpaper.conf
+killall -e hyprpaper & sleep 1; hyprpaper &
+
+## waybar
+sed -i 's@themes/*.*@themes/gruvbox.css";@g' /home/$USER/.dotfiles/config/waybar/style.css
+killall waybar && waybar & disown

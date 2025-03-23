@@ -25,11 +25,6 @@ sed -i 's@themes/*.*@themes/tokyonight@g' /home/$USER/.dotfiles/.config/ghostty/
 sed -i "s@colorscheme\ *.*@colorscheme tokyonight'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
 sed -i "s@theme\ =\ *.*@theme\ =\ 'tokyonight',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
-# qtile
-sed -i 's/themes.*\ import\ colors/themes.tokyonight\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-sed -i 's@wallpapers/*.*@wallpapers/tokyonight.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-qtile cmd-obj -o cmd -f reload_config
-
 # rofi
 sed -i 's@themes/*.*@themes/tokyonight"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
@@ -39,3 +34,17 @@ sed -i 's@assets/*.*@assets/style-tokyonight.css"\ rel="stylesheet" />@g' /ssd/P
 # Xresources
 sed -i 's@xresources/*.*@xresources/tokyonight"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
+
+# hypr
+## hyprland
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(f7768eff)@g' hyprland.conf
+sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(414868ff)@g' hyprland.conf
+sed -i 's@color*.*@color\ =\ rgba(24283bff)@g' hyprland.conf
+
+## hyprpaper
+sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/tokyonight.jpg@g' hyprpaper.conf
+killall -e hyprpaper & sleep 1; hyprpaper &
+
+## waybar
+sed -i 's@themes/*.*@themes/tokyonight.css";@g' /home/$USER/.dotfiles/config/waybar/style.css
+killall waybar && waybar & disown

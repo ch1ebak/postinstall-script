@@ -25,11 +25,6 @@ sed -i 's@themes/*.*@themes/Dracula@g' /home/$USER/.dotfiles/.config/ghostty/con
 sed -i "s@colorscheme\ *.*@colorscheme dracula'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
 sed -i "s@theme\ =\ *.*@theme\ =\ 'dracula',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
-# qtile
-sed -i 's/themes.*\ import\ colors/themes.dracula\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-sed -i 's@wallpapers/*.*@wallpapers/dracula.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-qtile cmd-obj -o cmd -f reload_config
-
 # rofi
 sed -i 's@themes/*.*@themes/dracula"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
@@ -39,3 +34,17 @@ sed -i 's@assets/*.*@assets/style-dracula.css"\ rel="stylesheet" />@g' /ssd/Proj
 # Xresources
 sed -i 's@xresources/*.*@xresources/dracula"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
+
+# hyprland
+## hyprland
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(5AF78Eff)@g' hyprland.conf
+sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(4D4D4Dff)@g' hyprland.conf
+sed -i 's@color*.*@color\ =\ rgba(3D3F4Aff)@g' hyprland.conf
+
+## hyprpaper
+sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/dracula.png@g' hyprpaper.conf
+killall -e hyprpaper & sleep 1; hyprpaper &
+
+## waybar
+sed -i 's@themes/*.*@themes/dracula.css";@g' /home/$USER/.dotfiles/config/waybar/style.css
+killall waybar && waybar & disown

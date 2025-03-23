@@ -25,11 +25,6 @@ sed -i 's@themes/*.*@themes/SpaceGray@g' /home/$USER/.dotfiles/.config/ghostty/c
 sed -i "s@colorscheme\ *.*@colorscheme nordic'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
 sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/lua/plugins/lualine.lua
 
-# qtile
-sed -i 's/themes.*\ import\ colors/themes.spacegray\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-sed -i 's@wallpapers/*.*@wallpapers/spacegray.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-qtile cmd-obj -o cmd -f reload_config
-
 # rofi
 sed -i 's@themes/*.*@themes/spacegray"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
@@ -39,3 +34,17 @@ sed -i 's@assets/*.*@assets/style-spacegray.css"\ rel="stylesheet" />@g' /ssd/Pr
 # Xresources
 sed -i 's@xresources/*.*@xresources/spacegray"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
+
+# hyprland
+## hyprland
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(b04b57ff)@g' hyprland.conf
+sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(4c4f56ff)@g' hyprland.conf
+sed -i 's@color*.*@color\ =\ rgba(363942ff)@g' hyprland.conf
+
+## hyprpaper
+sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/spacegray.png@g' hyprpaper.conf
+killall -e hyprpaper & sleep 1; hyprpaper &
+
+## waybar
+sed -i 's@themes/*.*@themes/spacegray.css";@g' /home/$USER/.dotfiles/config/waybar/style.css
+killall waybar && waybar & disown
