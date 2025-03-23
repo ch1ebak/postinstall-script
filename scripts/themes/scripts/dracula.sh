@@ -46,4 +46,3 @@ sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/dracula.png@g' /home/$USER/.dotfile
 
 ## waybar
 sed -i 's@themes/*.*@themes/dracula.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-killall waybar && waybar & disown
