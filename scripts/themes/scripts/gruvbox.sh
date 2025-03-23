@@ -37,12 +37,12 @@ xrdb -merge ~/.Xresources
 
 # hyprland
 ## hyprland
-sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(98971aff)@g' hyprland.conf
-sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(504945ff)@g' hyprland.conf
-sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' hyprland.conf
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(98971aff)@g' /home/$USER/.dotfiles/config/hypr/hyprland.conf
+sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(504945ff)@g' /home/$USER/.dotfiles/config/hypr/hyprland.conf
+sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' /home/$USER/.dotfiles/config/hypr/hyprland.conf
 
 ## hyprpaper
-sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' hyprpaper.conf
+sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' /home/$USER/.dotfiles/config/hypr/hyprpaper.conf
 killall -e hyprpaper & sleep 1; hyprpaper &
 
 ## waybar
