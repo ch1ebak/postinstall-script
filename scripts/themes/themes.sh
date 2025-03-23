@@ -21,6 +21,10 @@ gruvbox () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/gruvbox.sh)
 }
 
+kanagawa () {
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/kanagawa.sh)
+}
+
 spacegray () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/scripts/spacegray.sh)
 }
@@ -38,9 +42,10 @@ while true; do
             1) catppuccin; break ;;
             2) dracula; break ;;
             3) gruvbox; break ;;
-            4) spacegray; break ;;
-            5) tokyonight; break ;;
-            6) break 2 ;;
+            4) kanagawa; break ;;
+            5) spacegray; break ;;
+            6) tokyonight; break ;;
+            7) break 2 ;;
             *) echo "Invalid option $REPLY" >&2
         esac
     done
