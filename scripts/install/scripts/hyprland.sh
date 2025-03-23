@@ -10,20 +10,19 @@ echo -e "
 "
 
 LIST_OF_APPS="
+acpilight
 brightnessctl
+cliphist
 egl-wayland
+hyprcursor
 hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpolkitagent
 qt5-wayland
 rofi-wayland
-waybar"
+waybar
+xdg-desktop-portal-hyprland"
 
-paru -Rns xorg-xbacklight
 paru -S --needed $LIST_OF_APPS
-cd /home/$USER/.dotfiles/backups
-mv /home/$USER/.dotfiles/backups/hypr /home/$USER/.dotfiles/.config/hypr
-mv /home/$USER/.dotfiles/backups/waybar /home/$USER/.dotfiles/.config/waybar
-cd /home/$USER/.dotfiles
-stow . --adopt

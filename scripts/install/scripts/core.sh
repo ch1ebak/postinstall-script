@@ -53,7 +53,6 @@ ttf-jetbrains-mono-nerd
 volumeicon
 wget
 zen-browser-bin
-xdg-utils
 yt-dlp
 openssh
 wget
