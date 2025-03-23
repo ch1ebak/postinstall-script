@@ -43,7 +43,6 @@ sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' /home/$USER/.dotfiles/.config/hyp
 
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-killall -e hyprpaper & sleep 1; hyprpaper &
 
 ## waybar
 sed -i 's@themes/*.*@themes/gruvbox.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
