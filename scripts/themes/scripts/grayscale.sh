@@ -9,15 +9,6 @@ echo -e "
                                             
 "
 
-# btop
-sed -i 's@themes/*.*@themes/grayscale.theme"@g' /home/$USER/.dotfiles/.config/btop/btop.conf
-
-# dunst
-sed -i 's@background\ =\ "#*.*@background\ =\ "#080808"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#cccccc"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#7a7a7a"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-killall -e dunst & sleep 1; dunstify "Theme switched to grayscale" &
-
 # ghostty
 sed -i 's@themes/*.*@themes/gruber-darker@g' /home/$USER/.dotfiles/.config/ghostty/config
 
@@ -46,6 +37,9 @@ sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(7a7a7aff)@g' /home/$US
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(2a2a2aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(191919ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
+## hyprlock
+sed -i 's@wallpapers/*.*@wallpapers/grayscale.png@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
+
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/grayscale.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
 nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
@@ -54,4 +48,8 @@ nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 sed -i 's@themes/*.*@themes/grayscale.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
 nohup bash -c "killall waybar && waybar & disown"
 
-echo -e "grayscale"
+# dunst
+sed -i 's@background\ =\ "#*.*@background\ =\ "#080808"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#cccccc"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#7a7a7a"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+killall -e dunst & sleep 1; dunstify "Theme switched to grayscale" &

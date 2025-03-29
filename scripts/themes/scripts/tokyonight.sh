@@ -9,15 +9,6 @@ echo -e "
                                                   
 "
 
-# btop
-sed -i 's@themes/*.*@themes/tokyonight.theme"@g' /home/$USER/.dotfiles/.config/btop/btop.conf
-
-# dunst
-sed -i 's@background\ =\ "#*.*@background\ =\ "#1a1b26"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#a9b1d6"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#f7768e"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-killall -e dunst & sleep 1; dunstify "Theme switched to Tokyo Night" &
-
 # ghostty
 sed -i 's@themes/*.*@themes/tokyonight@g' /home/$USER/.dotfiles/.config/ghostty/config
 
@@ -46,6 +37,9 @@ sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(f7768eff)@g' /home/$US
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(414868ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(24283bff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
+## hyprlock
+sed -i 's@wallpapers/*.*@wallpapers/tokyonight.png@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
+
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/tokyonight.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
 nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
@@ -54,4 +48,8 @@ nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 sed -i 's@themes/*.*@themes/tokyonight.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
 nohup bash -c "killall waybar && waybar & disown"
 
-echo -e "Tokyo Night"
+# dunst
+sed -i 's@background\ =\ "#*.*@background\ =\ "#1a1b26"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#a9b1d6"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#f7768e"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+killall -e dunst & sleep 1; dunstify "Theme switched to Tokyo Night" &

@@ -9,12 +9,6 @@ echo -e "
                                          
 "
 
-# dunst
-sed -i 's@background\ =\ "#*.*@background\ =\ "#1f1f28"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#dcd7ba"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#2d4f67"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-killall -e dunst & sleep 1; dunstify "Theme switched to Kanagawa" &
-
 # ghostty
 sed -i 's@themes/*.*@themes/Kanagawa\ Wave@g' /home/$USER/.dotfiles/.config/ghostty/config
 
@@ -43,6 +37,9 @@ sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(2d4f67ff)@g' /home/$US
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(35353Dff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(1f1f28ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
+## hyprlock
+sed -i 's@wallpapers/*.*@wallpapers/kanagawa.png@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
+
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/kanagawa.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
 nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
@@ -50,3 +47,9 @@ nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 ## waybar
 sed -i 's@themes/*.*@themes/kanagawa.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
 nohup bash -c "killall waybar && waybar & disown"
+
+# dunst
+sed -i 's@background\ =\ "#*.*@background\ =\ "#1f1f28"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#dcd7ba"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#2d4f67"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+killall -e dunst & sleep 1; dunstify "Theme switched to Kanagawa" &

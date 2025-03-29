@@ -9,15 +9,6 @@ echo -e "
                                                   
 "
 
-# btop
-sed -i 's@themes/*.*@themes/catppuccin.theme"@g' /home/$USER/.dotfiles/.config/btop/btop.conf
-
-# dunst
-sed -i 's@background\ =\ "#*.*@background\ =\ "#1e1e2e"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#cdd6f4"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#cba6f7"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-killall -e dunst & sleep 1; dunstify "Theme switched to Catppuccin" &
-
 # ghostty
 sed -i 's@themes/*.*@themes/catppuccin-mocha@g' /home/$USER/.dotfiles/.config/ghostty/config
 
@@ -46,6 +37,9 @@ sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(cba6f7ff)@g' /home/$US
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(45475aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(313244ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
+## hyprlock
+sed -i 's@wallpapers/*.*@wallpapers/catppuccin.png@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
+
 ## hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/catppuccin.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
 nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper & disown"
@@ -54,4 +48,8 @@ nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper & disown"
 sed -i 's@themes/*.*@themes/catppuccin.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
 nohup bash -c "killall waybar && waybar & disown"
 
-echo -e "Catppuccin"
+# dunst
+sed -i 's@background\ =\ "#*.*@background\ =\ "#1e1e2e"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#cdd6f4"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#cba6f7"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+killall -e dunst & sleep 1; dunstify "Theme switched to Catppuccin" &
