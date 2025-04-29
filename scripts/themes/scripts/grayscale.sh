@@ -10,7 +10,7 @@ echo -e "
 "
 
 # ghostty
-sed -i 's@themes/*.*@themes/gruber-darker@g' /home/$USER/.dotfiles/.config/ghostty/config
+sed -i 's@themes/*.*@themes/zenwritten_dark@g' /home/$USER/.dotfiles/.config/ghostty/config
 
 # neovim
 sed -i "s@colorscheme\ *.*@colorscheme lackluster'@g" /home/$USER/.dotfiles/.config/nvim/lua/core/colorscheme.lua
