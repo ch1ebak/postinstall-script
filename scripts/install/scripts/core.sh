@@ -46,6 +46,7 @@ smartmontools
 stow
 syncthing
 thunar
+thunar-archive-plugin
 trash-cli
 ttf-ancient-fonts
 ttf-atkinson-hyperlegible
