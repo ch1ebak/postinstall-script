@@ -20,6 +20,7 @@ hyprland
 hyprlock
 hyprpaper
 hyprpolkitagent
+hyprshot
 qt5-wayland
 rofi-wayland
 waybar
