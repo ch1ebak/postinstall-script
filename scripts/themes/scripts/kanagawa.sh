@@ -19,9 +19,6 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/
 # rofi
 sed -i 's@themes/*.*@themes/kanagawa"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# Startpage
-sed -i 's@assets/*.*@assets/style-kanagawa.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
-
 # spicetify
 spicetify config current_theme text
 spicetify config color_scheme Kanagawa
@@ -31,22 +28,10 @@ spicetify apply
 sed -i 's@xresources/*.*@xresources/kanagawa"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
 
-# hypr
-## hyprland
-sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(2d4f67ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(35353Dff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-sed -i 's@color*.*@color\ =\ rgba(1f1f28ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-
-## hyprlock
-sed -i 's@wallpapers/*.*@wallpapers/kanagawa.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
-
-## hyprpaper
-sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/kanagawa.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
-
-## waybar
-sed -i 's@themes/*.*@themes/kanagawa.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+# qtile
+sed -i 's/themes.*\ import\ colors/themes.kanagawa\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/kanagawa.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
+qtile cmd-obj -o cmd -f reload_config
 
 # dunst
 sed -i 's@background\ =\ "#*.*@background\ =\ "#1f1f28"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc

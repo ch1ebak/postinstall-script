@@ -10,6 +10,7 @@ echo -e "
 "
 
 LIST_OF_APPS="
+lxappearance-gtk3
 picom-git
 python-pip
 python-psutil

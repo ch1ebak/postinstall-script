@@ -19,9 +19,6 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'catppuccin',@g" /home/$USER/.dotfiles/.config
 # rofi
 sed -i 's@themes/*.*@themes/catppuccin"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# Startpage
-sed -i 's@assets/*.*@assets/style-catppuccin.css"\ rel="stylesheet" />@g' /ssd/Projekty/orgmode-startpage/index.html
-
 # spicetify
 spicetify config current_theme text
 spicetify config color_scheme Catppuccin
@@ -31,22 +28,10 @@ spicetify apply
 sed -i 's@xresources/*.*@xresources/catppuccin"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
 
-# hyprland
-## hyprland
-sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(cba6f7ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(45475aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-sed -i 's@color*.*@color\ =\ rgba(313244ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
-
-## hyprlock
-sed -i 's@wallpapers/*.*@wallpapers/catppuccin.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
-
-## hyprpaper
-sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/catppuccin.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper & disown"
-
-## waybar
-sed -i 's@themes/*.*@themes/catppuccin.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+# qtile
+sed -i 's/themes.*\ import\ colors/themes.catppuccin\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/catppuccin.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
+qtile cmd-obj -o cmd -f reload_config
 
 # dunst
 sed -i 's@background\ =\ "#*.*@background\ =\ "#1e1e2e"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
