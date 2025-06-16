@@ -10,6 +10,8 @@ echo -e "
 "
 
 LIST_OF_APPS="
+acpilight
+brightnessctl
 btop
 calibre
 cantarell-fonts

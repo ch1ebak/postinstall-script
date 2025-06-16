@@ -10,8 +10,6 @@ echo -e "
 "
 
 LIST_OF_APPS="
-acpilight
-brightnessctl
 cliphist
 egl-wayland
 hyprcursor
