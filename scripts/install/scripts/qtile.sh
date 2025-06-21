@@ -15,6 +15,7 @@ picom-git
 python-pip
 python-psutil
 qtile
+qtile-extras
 rofi
 slock
 xclip
