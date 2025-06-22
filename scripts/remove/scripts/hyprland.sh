@@ -19,7 +19,6 @@ hyprpaper
 hyprpolkitagent
 hyprshot
 qt5-wayland
-rofi-wayland
 waybar
 xdg-desktop-portal-hyprland"
 
