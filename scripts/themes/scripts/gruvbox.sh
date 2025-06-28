@@ -29,27 +29,35 @@ sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresource
 xrdb -merge ~/.Xresources
 
 
-# qtile
-# sed -i 's/themes.*\ import\ colors/themes.gruvbox\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-# sed -i 's@wallpapers/*.*@wallpapers/gruvbox.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-# qtile cmd-obj -o cmd -f reload_config
+# WMs
+## qtile
+sed -i 's/themes.*\ import\ colors/themes.gruvbox\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/gruvbox.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
 
-# hyprland
 ## hyprland
+### hyprland
 sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(98971aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(504945ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(3c3836ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
-## hyprlock
+### hyprlock
 sed -i 's@wallpapers/*.*@wallpapers/gruvbox.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
 
-## hyprpaper
+### hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/gruvbox.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
-## waybar
+### waybar
 sed -i 's@themes/*.*@themes/gruvbox.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+
+## reset
+if [ $XDG_SESSION_TYPE = 'wayland' ]; then
+  nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
+  nohup bash -c "killall waybar && waybar & disown"
+elif [ $XDG_SESSION_TYPE = 'x11' ]; then
+  qtile cmd-obj -o cmd -f reload_config
+else
+  echo "What?"
+fi
 
 
 # dunst

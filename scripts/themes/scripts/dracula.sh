@@ -29,27 +29,35 @@ sed -i 's@xresources/*.*@xresources/dracula"@g' /home/$USER/.dotfiles/.Xresource
 xrdb -merge ~/.Xresources
 
 
-# qtile
-# sed -i 's/themes.*\ import\ colors/themes.dracula\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-# sed -i 's@wallpapers/*.*@wallpapers/dracula.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-# qtile cmd-obj -o cmd -f reload_config
+# WMs
+## qtile
+sed -i 's/themes.*\ import\ colors/themes.dracula\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/dracula.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
 
-# hyprland
 ## hyprland
+### hyprland
 sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(5AF78Eff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(4D4D4Dff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(3D3F4Aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
-## hyprlock
+### hyprlock
 sed -i 's@wallpapers/*.*@wallpapers/dracula.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
 
-## hyprpaper
+### hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/dracula.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
-## waybar
+### waybar
 sed -i 's@themes/*.*@themes/dracula.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+
+## reset
+if [ $XDG_SESSION_TYPE = 'wayland' ]; then
+  nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
+  nohup bash -c "killall waybar && waybar & disown"
+elif [ $XDG_SESSION_TYPE = 'x11' ]; then
+  qtile cmd-obj -o cmd -f reload_config
+else
+  echo "What?"
+fi
 
 
 # dunst

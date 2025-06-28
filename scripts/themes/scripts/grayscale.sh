@@ -28,27 +28,36 @@ spicetify apply
 sed -i 's@xresources/*.*@xresources/grayscale"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
 
-# qtile
-# sed -i 's/themes.*\ import\ colors/themes.grayscale\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-# sed -i 's@wallpapers/*.*@wallpapers/grayscale.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-# qtile cmd-obj -o cmd -f reload_config
 
-# hyprland
+# WMs
+## qtile
+sed -i 's/themes.*\ import\ colors/themes.grayscale\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/grayscale.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
+
 ## hyprland
+### hyprland
 sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(7a7a7aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(2a2a2aff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(191919ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
-## hyprlock
+### hyprlock
 sed -i 's@wallpapers/*.*@wallpapers/grayscale.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
 
-## hyprpaper
+### hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/grayscale.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
-## waybar
+### waybar
 sed -i 's@themes/*.*@themes/grayscale.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+
+## reset
+if [ $XDG_SESSION_TYPE = 'wayland' ]; then
+  nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
+  nohup bash -c "killall waybar && waybar & disown"
+elif [ $XDG_SESSION_TYPE = 'x11' ]; then
+  qtile cmd-obj -o cmd -f reload_config
+else
+  echo "What?"
+fi
 
 
 # dunst

@@ -24,32 +24,40 @@ spicetify config current_theme text
 spicetify config color_scheme everforest
 spicetify apply
 
-
 # Xresources
 sed -i 's@xresources/*.*@xresources/everforest"@g' /home/$USER/.dotfiles/.Xresources
 xrdb -merge ~/.Xresources
 
-# qtile
-# sed -i 's/themes.*\ import\ colors/themes.everforest\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
-# sed -i 's@wallpapers/*.*@wallpapers/everforest.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
-# qtile cmd-obj -o cmd -f reload_config
 
-# hyprland
+# WMs
+## qtile
+sed -i 's/themes.*\ import\ colors/themes.everforest\ import\ colors/g' /home/$USER/.dotfiles/.config/qtile/config.py
+sed -i 's@wallpapers/*.*@wallpapers/everforest.png",@g' /home/$USER/.dotfiles/.config/qtile/config.py
+
 ## hyprland
+### hyprland
 sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(4f5b58ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(272e33ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(1e2326ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
-## hyprlock
+### hyprlock
 sed -i 's@wallpapers/*.*@wallpapers/everforest.png@g' /home/$USER/.dotfiles/.config/hypr/hyprlock.conf
 
-## hyprpaper
+## #hyprpaper
 sed -i 's@hypr/wallpapers*.*@hypr/wallpapers/everforest.png@g' /home/$USER/.dotfiles/.config/hypr/hyprpaper.conf
-nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
 
-## waybar
+### waybar
 sed -i 's@themes/*.*@themes/everforest.css";@g' /home/$USER/.dotfiles/.config/waybar/style.css
-nohup bash -c "killall waybar && waybar & disown"
+
+## reset
+if [ $XDG_SESSION_TYPE = 'wayland' ]; then
+  nohup bash -c "killall -e hyprpaper & sleep 1; hyprpaper &"
+  nohup bash -c "killall waybar && waybar & disown"
+elif [ $XDG_SESSION_TYPE = 'x11' ]; then
+  qtile cmd-obj -o cmd -f reload_config
+else
+  echo "What?"
+fi
 
 
 # dunst
