@@ -10,13 +10,13 @@ echo -e "
 "
 
 LIST_OF_APPS="
-lxappearance-gtk3
 picom-git
 python-pip
 python-psutil
 qtile
 qtile-extras
 rofi
+scrot
 slock
 xclip
 xorg-server

@@ -10,7 +10,7 @@ echo -e "
 "
 
 cd /home/$USER/
-trash .config/qtile .bashrc .Xresources
+trash .config/qtile .bashrc .Xresources .config/hypr .config/waybar
 git clone https://github.com/ch1ebak/dotfiles
 mv dotfiles .dotfiles
 cd .dotfiles

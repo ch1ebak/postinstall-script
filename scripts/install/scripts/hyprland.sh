@@ -12,13 +12,13 @@ echo -e "
 LIST_OF_APPS="
 cliphist
 egl-wayland
+grim
 hyprcursor
 hypridle
 hyprland
 hyprlock
 hyprpaper
 hyprpolkitagent
-hyprshot
 qt5-wayland
 rofi-wayland
 waybar
