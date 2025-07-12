@@ -33,6 +33,7 @@ keepassxc
 lazygit
 linux-headers
 mpv
+neovim
 network-manager-applet
 networkmanager
 nordic-darker-theme
@@ -56,6 +57,7 @@ ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
 wget
 zen-browser-bin
+yazi
 yt-dlp
 openssh
 wget

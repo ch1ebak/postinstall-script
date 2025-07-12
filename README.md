@@ -15,11 +15,9 @@ bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs
 |---------|----------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Install | Core     | Installs core applications I always want to have installed, no matter which WM or editor I use. Installs Paru and modifies pacman.conf. |
 |         | Dotfiles | Clones my [dotfiles](https://github.com/ch1ebak/dotfiles) and links them to the config folder using Stow. Makes Rofi modules executable. |
-|         | SDDM     | Installs SDDM and the Astronaut theme.                                                                                                      |
+|         | SDDM     | Installs SDDM and the [Astronaut](https://github.com/keyitdev/sddm-astronaut-theme) theme.                                                                                                      |
 |         | Qtile    | Installs Qtile and its dependencies/applications I use on X11.                                                                              |
 |         | Hyprland | Installs Hyprland and the Wayland-specific applications                                                                                     |
-|         | Neovim   | Installs Neovim. If I want to use Neovim instead of Emacs, I will also want Yazi to be installed, so it's included in this script.       |
-|         | Emacs    | Installs Emacs.                                                                                                                             |
 |         | Steam    | Installs Steam and its dependencies.                                                                                                        |
 |         | Lutris   | Installs Lutris and all libraries listed in Lutris Docs.                                                                                    |
 |         | VM       | Installs Virt-manager.                                                                                                                      |
