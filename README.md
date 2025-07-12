@@ -1,6 +1,6 @@
 # CH1EBAK'S POSTINSTALL SCRIPT
 ## What is this?
-This is a collection of scripts that I wrote to make the process of reinstalling a system easier and faster. The code is pretty ugly, but hey, this is my first script, and it works, so who cares.
+This is a collection of scripts that I wrote to make the process of reinstalling Arch easier and faster. The code is pretty ugly, but hey, this is my first script, and it works, so who cares.
 
 > [!WARNING]
 > This probably only works on Arch based distros.
