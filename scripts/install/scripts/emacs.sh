@@ -10,9 +10,8 @@ echo -e "
 "
 
 LIST_OF_APPS="
-emacs-nativecomp
+emacs
 languagetool
-imagemagick
 "
 
 paru -S --needed $LIST_OF_APPS

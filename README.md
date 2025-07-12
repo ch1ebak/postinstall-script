@@ -1,28 +1,29 @@
-# ch1ebak's postinstall script
+# CH1EBAK'S POSTINSTALL SCRIPT
+## What is this?
+This is a collection of scripts that I wrote to make the process of reinstalling a system easier and faster. The code is pretty ugly, but hey, this is my first script, and it works, so who cares.
 
-a collection of simple scripts:
-- installs packages
-  - core packages
-  - window managers
-    - qtile
-    - hyprland
-    - [dwm](https://github.com/ch1ebak/dwm-ch1ebak) (todo)
-  - text editors
-    - neovim
-    - emacs
-  - gaming-related packages
-  - virt-manager
-- clones and helps setup my [dotfiles](https://github.com/ch1ebak/dotfiles)
-- removes groups of packages
-- basic system maintenance (to fix)
-- theme-switcher
-  - catppuccin
-  - dracula
-  - gruvbox
-  - spacegray
-  - tokyo night
+> [!WARNING]
+> This probably only works on Arch based distros.
 
-# usage
+## Usage
 ```
 bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/postinstall.sh)
 ```
+
+## Modules
+| Module  | Script   | Description                                                                                                                                 |
+|---------|----------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Install | Core     | Installs core applications I always want to have installed, no matter which WM or editor I use. Installs Paru and modifies pacman.conf. |
+|         | Dotfiles | Clones my [dotfiles](https://github.com/ch1ebak/dotfiles) and links them to the config folder using Stow. Makes Rofi modules executable. |
+|         | SDDM     | Installs SDDM and the Astronaut theme.                                                                                                      |
+|         | Qtile    | Installs Qtile and its dependencies/applications I use on X11.                                                                              |
+|         | Hyprland | Installs Hyprland and the Wayland-specific applications                                                                                     |
+|         | Neovim   | Installs Neovim. If I want to use Neovim instead of Emacs, I will also want Yazi to be installed, so it's included in this script.       |
+|         | Emacs    | Installs Emacs.                                                                                                                             |
+|         | Steam    | Installs Steam and its dependencies.                                                                                                        |
+|         | Lutris   | Installs Lutris and all libraries listed in Lutris Docs.                                                                                    |
+|         | VM       | Installs Virt-manager.                                                                                                                      |
+| Remove  | Remove   | Remove scripts for Emacs, Neovim, Hyprland, Qtile, and VM, for when I'm feeling lazy.                                                       |
+| System  | Update   | Updates Arch. Nothing fancy.                                                                                                                |
+|         | Cleanup  | Cleans up unneeded dependencies, clears trash and old files.                                                                                |
+| Themes  | Themes   | Changes the theme to Catppuccin, Dracula, Everforest, Grayscale, Gruvbox, Kanagawa, Spacegray, or Tokyo Night.                         |

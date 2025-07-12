@@ -27,6 +27,7 @@ git
 github-cli
 gvfs
 gvfs-mtp
+imagemagick
 iwd
 keepassxc
 lazygit
