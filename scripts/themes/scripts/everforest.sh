@@ -36,7 +36,7 @@ sed -i 's@wallpapers/*.*@wallpapers/everforest.png",@g' /home/$USER/.dotfiles/.c
 
 ## hyprland
 ### hyprland
-sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(4f5b58ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
+sed -i 's@col.active_border*.*@col.active_border\ =\ rgba(a7c080ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@col.inactive_border*.*@col.inactive_border\ =\ rgba(272e33ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 sed -i 's@color*.*@color\ =\ rgba(1e2326ff)@g' /home/$USER/.dotfiles/.config/hypr/hyprland.conf
 
@@ -63,5 +63,5 @@ fi
 # dunst
 sed -i 's@background\ =\ "#*.*@background\ =\ "#1e2326"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 sed -i 's@foreground\ =\ "#*.*@foreground\ =\ "#d3c6aa"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
-sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#4f5b58"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
+sed -i 's@frame_color\ =\ "#*.*@frame_color\ =\ "#a7c080"@g' /home/$USER/.dotfiles/.config/dunst/dunstrc
 killall -e dunst & sleep 1; dunstify "Theme switched to everforest" &

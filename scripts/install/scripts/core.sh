@@ -53,7 +53,6 @@ trash-cli
 ttf-ancient-fonts
 ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
-volumeicon
 wget
 zen-browser-bin
 yt-dlp
