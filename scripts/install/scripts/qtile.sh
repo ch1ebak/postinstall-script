@@ -26,4 +26,4 @@ xorg-xkill
 xorg-xrandr
 "
 
-paru -S --needed $LIST_OF_APPS
+paru -S --needed --noconfirm $LIST_OF_APPS

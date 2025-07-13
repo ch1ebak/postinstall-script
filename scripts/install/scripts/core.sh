@@ -68,11 +68,11 @@ zoxide"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
 sudo pacman -Syu
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed --noconfirm base-devel git
 cd /home/$USER/
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
-paru -S --needed $LIST_OF_APPS
+paru -S --needed --noconfirm $LIST_OF_APPS
 cd /home/$USER/
 trash -v paru

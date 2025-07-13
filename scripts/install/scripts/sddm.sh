@@ -9,7 +9,7 @@ echo -e "
                      
 "
 
-paru -S --needed sddm qt6-svg
+paru -S --needed --noconfirm sddm qt6-svg
 systemctl enable sddm
 sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
 sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
