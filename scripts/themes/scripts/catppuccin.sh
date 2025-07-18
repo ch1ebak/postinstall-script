@@ -20,7 +20,7 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'catppuccin',@g" /home/$USER/.dotfiles/.config
 sed -i 's@themes/*.*@themes/catppuccin"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
 # rmpc
-sed -i 's/theme:\ Some("*.*"),/theme:\ Some("catppuccin"),/g' config.ron
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("catppuccin"),/g' /home/$USER/.dotfiles/.config/rmpc/config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/catppuccin"@g' /home/$USER/.dotfiles/.Xresources

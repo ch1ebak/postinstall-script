@@ -20,7 +20,7 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/
 sed -i 's@themes/*.*@themes/spacegray"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
 # rmpc
-sed -i 's/theme:\ Some("*.*"),/theme:\ Some("spacegrey"),/g' config.ron
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("spacegrey"),/g' /home/$USER/.dotfiles/.config/rmpc/config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/spacegray"@g' /home/$USER/.dotfiles/.Xresources

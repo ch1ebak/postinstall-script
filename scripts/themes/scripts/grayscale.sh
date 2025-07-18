@@ -20,7 +20,7 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'lackluster',@g" /home/$USER/.dotfiles/.config
 sed -i 's@themes/*.*@themes/grayscale"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
 # rmpc
-sed -i 's/theme:\ Some("*.*"),/theme:\ Some("grayscale"),/g' config.ron
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("grayscale"),/g' /home/$USER/.dotfiles/.config/rmpc/config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/grayscale"@g' /home/$USER/.dotfiles/.Xresources
