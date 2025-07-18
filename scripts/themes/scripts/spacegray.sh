@@ -19,10 +19,8 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/
 # rofi
 sed -i 's@themes/*.*@themes/spacegray"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme Spacegray
-spicetify apply
+# rmpc
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("spacegrey"),/g' config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/spacegray"@g' /home/$USER/.dotfiles/.Xresources

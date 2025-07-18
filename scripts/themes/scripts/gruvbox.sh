@@ -19,10 +19,8 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'gruvbox',@g" /home/$USER/.dotfiles/.config/nv
 # rofi
 sed -i 's@themes/*.*@themes/gruvbox"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme Gruvbox
-spicetify apply
+# rmpc
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("gruvbox"),/g' config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/gruvbox"@g' /home/$USER/.dotfiles/.Xresources

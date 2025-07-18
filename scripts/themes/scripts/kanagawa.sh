@@ -19,10 +19,8 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'auto',@g" /home/$USER/.dotfiles/.config/nvim/
 # rofi
 sed -i 's@themes/*.*@themes/kanagawa"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme Kanagawa
-spicetify apply
+# rmpc
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("kanagawa"),/g' config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/kanagawa"@g' /home/$USER/.dotfiles/.Xresources

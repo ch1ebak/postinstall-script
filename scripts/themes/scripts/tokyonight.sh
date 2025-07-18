@@ -19,10 +19,8 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'tokyonight',@g" /home/$USER/.dotfiles/.config
 # rofi
 sed -i 's@themes/*.*@themes/tokyonight"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme TokyoNight
-spicetify apply
+# rmpc
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("tokyonight"),/g' config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/tokyonight"@g' /home/$USER/.dotfiles/.Xresources

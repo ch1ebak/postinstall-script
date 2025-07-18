@@ -19,10 +19,8 @@ sed -i "s@theme\ =\ *.*@theme\ =\ 'lackluster',@g" /home/$USER/.dotfiles/.config
 # rofi
 sed -i 's@themes/*.*@themes/grayscale"@g' /home/$USER/.dotfiles/.config/rofi/config.rasi
 
-# spicetify
-spicetify config current_theme text
-spicetify config color_scheme grayscale
-spicetify apply
+# rmpc
+sed -i 's/theme:\ Some("*.*"),/theme:\ Some("grayscale"),/g' config.ron
 
 # Xresources
 sed -i 's@xresources/*.*@xresources/grayscale"@g' /home/$USER/.dotfiles/.Xresources
