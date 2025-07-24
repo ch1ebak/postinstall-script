@@ -29,14 +29,6 @@ install_hyprland () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/hyprland.sh)
 }
 
-install_neovim () {
-  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/neovim.sh)
-}
-
-install_emacs () {
-  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/emacs.sh)
-}
-
 install_steam () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/steam.sh)
 }
@@ -50,7 +42,7 @@ install_vm () {
 }
 
 while true; do
-    options=("Install Core" "Clone Dotfiles" "SDDM" "Install Qtile" "Install Hyprland" "Install Neovim" "Install Emacs" "Install Steam" "Install Lutris" "Install Virt-Manager" "Back")
+    options=("Install Core" "Clone Dotfiles" "SDDM" "Install Qtile" "Install Hyprland" "Install Steam" "Install Lutris" "Install Virt-Manager" "Back")
 
     echo "Choose an option: "
     select opt in "${options[@]}"; do
@@ -60,12 +52,10 @@ while true; do
             3) sddm; break ;;
             4) install_qtile; break ;;
             5) install_hyprland; break ;;
-            6) install_neovim; break ;;
-            7) install_emacs; break ;;
-            8) install_steam; break ;;
-            9) install_lutris; break ;;
-           10) install_vm; break ;;
-           11) break 2 ;;
+            6) install_steam; break ;;
+            7) install_lutris; break ;;
+            8) install_vm; break ;;
+            9) break 2 ;;
             *) echo "Invalid option $REPLY" >&2
         esac
     done

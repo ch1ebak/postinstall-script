@@ -23,12 +23,8 @@ system () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/system/system.sh)
 }
 
-themes () {
-  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/themes/themes.sh)
-}
-
 while true; do
-    options=("Install Packages" "Remove Packages" "System Maintenance" "Change Color Scheme" "Quit")
+    options=("Install Packages" "Remove Packages" "System Maintenance" "Quit")
 
     echo "Choose an option: "
     select opt in "${options[@]}"; do
@@ -36,8 +32,7 @@ while true; do
             1) install; break ;;
             2) remove; break ;;
             3) system; break ;;
-            4) themes; break ;;
-            5) break 2 ;;
+            4) break 2 ;;
             *) echo "Invalid option $REPLY" >&2
         esac
     done

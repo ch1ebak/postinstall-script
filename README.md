@@ -21,7 +21,9 @@ bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs
 |         | Steam    | Installs Steam and its dependencies.                                                                                                        |
 |         | Lutris   | Installs Lutris and all libraries listed in Lutris Docs.                                                                                    |
 |         | VM       | Installs Virt-manager.                                                                                                                      |
-| Remove  | Remove   | Remove scripts for Emacs, Neovim, Hyprland, Qtile, and VM, for when I'm feeling lazy.                                                       |
+| Remove  | Remove   | Remove scripts for Hyprland, Qtile, and VM, for when I'm feeling lazy.                                                       |
 | System  | Update   | Updates Arch. Nothing fancy.                                                                                                                |
 |         | Cleanup  | Cleans up unneeded dependencies, clears trash and old files.                                                                                |
-| Themes  | Themes   | Changes the theme to Catppuccin, Dracula, Everforest, Grayscale, Gruvbox, Kanagawa, Spacegray, or Tokyo Night.                         |
+
+> [!WARNING]
+> Theme switcher no longer included, as I have moved it to [scripts/rofi-utilities](https://github.com/ch1ebak/scripts/blob/main/rofi-utilities)
