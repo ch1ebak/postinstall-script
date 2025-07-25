@@ -11,7 +11,6 @@ echo -e "
 
 LIST_OF_APPS="
 cliphist
-egl-wayland
 grim
 hyprcursor
 hypridle
