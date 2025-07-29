@@ -10,7 +10,7 @@ echo -e "
 "
 
 LIST_OF_APPS="
-picom-git
+picom
 python-pip
 python-psutil
 qtile
@@ -20,7 +20,6 @@ scrot
 slock
 xclip
 xorg-server
-xorg-xbacklight
 xorg-xinit
 xorg-xkill
 xorg-xrandr

@@ -17,7 +17,6 @@ calibre
 cantarell-fonts
 capitaine-cursors
 dunst
-emacs
 fd
 feh
 ferdium-bin
@@ -28,10 +27,6 @@ git
 github-cli
 gvfs
 gvfs-mtp
-harper
-hunspell
-hunspell-en_us
-hunspell-pl
 imagemagick
 iwd
 keepassxc
@@ -47,8 +42,6 @@ nvidia-open-dkms
 nvidia-settings
 nvtop
 nwg-look
-obsidian
-pandoc
 papirus-icon-theme
 pavucontrol
 qbittorrent
