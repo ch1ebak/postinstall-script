@@ -44,6 +44,7 @@ nvtop
 nwg-look
 papirus-icon-theme
 pavucontrol
+python-yams
 qbittorrent
 ripgrep
 rmpc
