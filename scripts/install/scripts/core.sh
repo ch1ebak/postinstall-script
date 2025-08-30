@@ -40,7 +40,6 @@ networkmanager
 nordic-darker-theme
 nvidia-open-dkms
 nvidia-settings
-nvtop
 nwg-look
 papirus-icon-theme
 pavucontrol
