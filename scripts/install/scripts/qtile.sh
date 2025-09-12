@@ -15,7 +15,6 @@ python-pip
 python-psutil
 qtile
 qtile-extras
-rofi
 scrot
 slock
 xclip

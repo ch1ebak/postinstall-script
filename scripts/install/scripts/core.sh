@@ -47,6 +47,7 @@ python-yams
 qbittorrent
 ripgrep
 rmpc
+rofi
 smartmontools
 stow
 syncthing

@@ -26,4 +26,4 @@ bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs
 |         | Cleanup  | Cleans up unneeded dependencies, clears trash and old files.                                                                                |
 
 > [!WARNING]
-> Theme switcher no longer included, as I have moved it to [scripts/rofi-utilities](https://github.com/ch1ebak/scripts/blob/main/rofi-utilities)
+> Theme switcher no longer included - I have moved it to [scripts/rofi-utilities](https://github.com/ch1ebak/scripts/blob/main/rofi-utilities)

@@ -15,7 +15,6 @@ python-pip
 python-psutil
 qtile
 qtile-extras
-rofi
 scrot
 slock
 xclip
@@ -26,4 +25,3 @@ xorg-xrandr
 "
 
 paru -Rns $LIST_OF_APPS
-paru -S rofi-wayland

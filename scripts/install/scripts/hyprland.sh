@@ -20,7 +20,6 @@ hyprlock
 hyprpaper
 hyprpolkitagent
 qt5-wayland
-rofi-wayland
 waybar
 xdg-desktop-portal-hyprland"
 

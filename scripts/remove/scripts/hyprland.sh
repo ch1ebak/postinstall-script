@@ -19,9 +19,7 @@ hyprlock
 hyprpaper
 hyprpolkitagent
 qt5-wayland
-rofi-wayland
 waybar
 xdg-desktop-portal-hyprland"
 
 paru -Rns $LIST_OF_APPS
-paru -S rofi
