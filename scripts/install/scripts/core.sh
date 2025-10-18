@@ -29,7 +29,6 @@ gvfs
 gvfs-mtp
 imagemagick
 iwd
-keepassxc
 lazygit
 linux-headers
 mpd
