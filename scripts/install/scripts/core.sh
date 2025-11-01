@@ -17,6 +17,7 @@ calibre
 cantarell-fonts
 capitaine-cursors
 dunst
+easyeffects
 fd
 feh
 ferdium-bin
@@ -31,6 +32,7 @@ imagemagick
 iwd
 lazygit
 linux-headers
+lsp-plugins
 mpd
 mpv
 neovim
@@ -41,7 +43,6 @@ nvidia-open-dkms
 nvidia-settings
 nwg-look
 papirus-icon-theme
-pavucontrol
 python-yams
 qbittorrent
 ripgrep
