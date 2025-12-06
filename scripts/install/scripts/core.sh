@@ -24,18 +24,15 @@ ferdium-bin
 file-roller
 fzf
 ghostty
-git
 github-cli
 gvfs
 gvfs-mtp
 imagemagick
 iwd
-lazygit
 linux-headers
 lsp-plugins
 mpd
 mpv
-neovim
 network-manager-applet
 networkmanager
 nordic-darker-theme
@@ -59,7 +56,6 @@ ttf-atkinson-hyperlegible
 ttf-jetbrains-mono-nerd
 wget
 zen-browser-bin
-yazi
 yt-dlp
 openssh
 wget
