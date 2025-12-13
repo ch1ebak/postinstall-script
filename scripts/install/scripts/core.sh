@@ -18,6 +18,7 @@ cantarell-fonts
 capitaine-cursors
 dunst
 easyeffects
+emacs
 fd
 feh
 ferdium-bin
@@ -60,9 +61,7 @@ yt-dlp
 openssh
 wget
 wireless_tools
-wpa_supplicant
-xdg-utils
-zoxide"
+wpa_supplicant"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
 sudo pacman -Syu
