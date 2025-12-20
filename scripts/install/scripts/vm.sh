@@ -18,7 +18,7 @@ qemu-base
 virt-manager
 "
 
-paru -S --needed $LIST_OF_APPS
+yay -S --needed $LIST_OF_APPS
 systemctl enable libvirtd
 systemctl start libvirtd
 sudo usermod -aG libvirt $USER

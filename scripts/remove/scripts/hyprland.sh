@@ -22,4 +22,4 @@ qt5-wayland
 waybar
 xdg-desktop-portal-hyprland"
 
-paru -Rns $LIST_OF_APPS
+yay -Rns $LIST_OF_APPS

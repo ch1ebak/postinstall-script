@@ -24,4 +24,4 @@ xorg-xkill
 xorg-xrandr
 "
 
-paru -Rns $LIST_OF_APPS
+yay -Rns $LIST_OF_APPS

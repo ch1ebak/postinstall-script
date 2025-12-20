@@ -11,8 +11,8 @@ echo -e "
 
 cleanup_system() {
     printf "%b\n" "Performing system cleanup..."
-    paru -Sc --noconfirm
-    paru -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1
+    yay -Sc --noconfirm
+    yay -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1
 }
 
 common_cleanup() {

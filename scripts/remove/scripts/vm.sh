@@ -19,5 +19,5 @@ virt-manager
 
 systemctl stop libvirtd
 systemctl disable libvirtd
-paru -S iptables
-paru -Rns $LIST_OF_APPS
+yay -S iptables
+yay -Rns $LIST_OF_APPS

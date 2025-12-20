@@ -65,11 +65,7 @@ wpa_supplicant"
                                                                                               
 sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
 sudo pacman -Syu
-sudo pacman -S --needed --noconfirm base-devel git
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+yay -S --needed --noconfirm $LIST_OF_APPS
 cd /home/$USER/
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-paru -S --needed --noconfirm $LIST_OF_APPS
-cd /home/$USER/
-trash -v paru
+trash -v yay-bin

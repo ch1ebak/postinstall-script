@@ -9,4 +9,4 @@ echo -e "
                              
 "
 
-paru -Syu
+yay -Syu

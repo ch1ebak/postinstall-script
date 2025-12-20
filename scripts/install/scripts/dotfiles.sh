@@ -15,7 +15,7 @@ trash-cli
 stow
 "
 
-paru -S --needed --noconfirm $LIST_OF_APPS
+yay -S --needed --noconfirm $LIST_OF_APPS
 cd /home/$USER/
 trash .config/qtile .bashrc .Xresources .config/hypr .config/waybar
 git clone https://github.com/ch1ebak/dotfiles

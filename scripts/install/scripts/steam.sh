@@ -17,4 +17,4 @@ proton-ge-custom-bin
 protontricks
 steam"
 
-paru -S --needed --noconfirm $LIST_OF_APPS
+yay -S --needed --noconfirm $LIST_OF_APPS

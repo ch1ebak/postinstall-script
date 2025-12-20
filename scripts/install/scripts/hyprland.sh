@@ -23,4 +23,4 @@ qt5-wayland
 waybar
 xdg-desktop-portal-hyprland"
 
-paru -S --needed --noconfirm $LIST_OF_APPS
+yay -S --needed --noconfirm $LIST_OF_APPS
