@@ -30,7 +30,7 @@ install_hyprland () {
 }
 
 install_gaming () {
-  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/steam.sh)
+  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/gaming.sh)
 }
 
 install_vm () {
