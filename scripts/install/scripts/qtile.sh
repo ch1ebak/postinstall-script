@@ -14,7 +14,7 @@ picom
 python-pip
 python-psutil
 qtile
-qtile-extras
+qtile-extras-git
 scrot
 slock
 xclip
