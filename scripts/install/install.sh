@@ -29,12 +29,8 @@ install_hyprland () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/hyprland.sh)
 }
 
-install_steam () {
+install_gaming () {
   bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/steam.sh)
-}
-
-install_lutris () {
-  bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/scripts/install/scripts/lutris.sh)
 }
 
 install_vm () {
@@ -52,10 +48,9 @@ while true; do
             3) sddm; break ;;
             4) install_qtile; break ;;
             5) install_hyprland; break ;;
-            6) install_steam; break ;;
-            7) install_lutris; break ;;
-            8) install_vm; break ;;
-            9) break 2 ;;
+            6) install_gaming; break ;;
+            7) install_vm; break ;;
+            8) break 2 ;;
             *) echo "Invalid option $REPLY" >&2
         esac
     done

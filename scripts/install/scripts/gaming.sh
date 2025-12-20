@@ -1,21 +1,25 @@
 #!/usr/bin/env bash
 
 echo -e "
-                              
-▗▖   ▗▖ ▗▖▗▄▄▄▖▗▄▄▖ ▗▄▄▄▖ ▗▄▄▖
-▐▌   ▐▌ ▐▌  █  ▐▌ ▐▌  █  ▐▌   
-▐▌   ▐▌ ▐▌  █  ▐▛▀▚▖  █   ▝▀▚▖
-▐▙▄▄▖▝▚▄▞▘  █  ▐▌ ▐▌▗▄█▄▖▗▄▄▞▘
-                              
+
+ ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖
+▐▌   ▐▌ ▐▌▐▛▚▞▜▌  █  ▐▛▚▖▐▌▐▌   
+▐▌▝▜▌▐▛▀▜▌▐▌  ▐▌  █  ▐▌ ▝▜▌▐▌▝▜▌
+▝▚▄▞▘▐▌ ▐▌▐▌  ▐▌▗▄█▄▖▐▌  ▐▌▝▚▄▞▘
+
 "
 
 LIST_OF_APPS="
+heroic-games-launcher-bin
 lib32-nvidia-utils
 lib32-vulkan-icd-loader
+lutris
 nvidia-open-dkms
 nvidia-settings
 nvidia-utils
-lutris
+proton-ge-custom-bin
+protontricks
+steam
 vulkan-icd-loader
 wine-staging"
 
