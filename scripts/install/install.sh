@@ -38,7 +38,7 @@ install_vm () {
 }
 
 while true; do
-    options=("Install Core" "Clone Dotfiles" "SDDM" "Install Qtile" "Install Hyprland" "Install Gaming" "Install Lutris" "Install Virt-Manager" "Back")
+    options=("Install Core" "Clone Dotfiles" "SDDM" "Install Qtile" "Install Hyprland" "Install Gaming" "Install Virt-Manager" "Back")
 
     echo "Choose an option: "
     select opt in "${options[@]}"; do
