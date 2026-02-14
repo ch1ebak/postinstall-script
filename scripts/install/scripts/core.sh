@@ -33,6 +33,7 @@ iwd
 linux-headers
 lsp-plugins
 mpd
+mpdscribble
 mpv
 network-manager-applet
 networkmanager
@@ -41,7 +42,6 @@ nvidia-open-dkms
 nvidia-settings
 nwg-look
 papirus-icon-theme
-python-yams
 qbittorrent
 ripgrep
 rmpc
