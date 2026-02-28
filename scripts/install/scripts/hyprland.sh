@@ -17,9 +17,9 @@ hyprcursor
 hypridle
 hyprland
 hyprlock
-hyprpaper
 hyprpolkitagent
 qt5-wayland
+swaybg
 waybar
 xdg-desktop-portal-hyprland"
 
