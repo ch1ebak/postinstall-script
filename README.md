@@ -2,6 +2,8 @@
 > [!NOTE]
 > I've cleaned up the script and rewrote it in one file to make it more portable.
 
+![](https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/screenshots/postinstall.png)
+
 ## What is this?
 This is a collection of scripts that I wrote to make the process of reinstalling Arch easier and faster. The code is pretty ugly, but hey, this is my first script, and it works, so who cares.
 
