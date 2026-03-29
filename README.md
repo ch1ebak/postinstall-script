@@ -12,7 +12,7 @@ This is a collection of scripts that I wrote to make the process of reinstalling
 
 ## Usage
 ```
-bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/postinstall.sh)
+bash <(curl -s https://raw.githubusercontent.com/ch1ebak/postinstall-script/refs/heads/main/postinstall)
 ```
 
 ## Modules
