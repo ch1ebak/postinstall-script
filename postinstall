@@ -1,0 +1,526 @@
+#!/usr/bin/env bash
+
+echo -e "
+                                                                                              
+▗▄▄▖  ▗▄▖  ▗▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▖ ▗▖   ▗▖        ▗▄▄▖ ▗▄▄▖▗▄▄▖ ▗▄▄▄▖▗▄▄▖▗▄▄▄▖
+▐▌ ▐▌▐▌ ▐▌▐▌     █    █  ▐▛▚▖▐▌▐▌     █ ▐▌ ▐▌▐▌   ▐▌       ▐▌   ▐▌   ▐▌ ▐▌  █  ▐▌ ▐▌ █
+▐▛▀▘ ▐▌ ▐▌ ▝▀▚▖  █    █  ▐▌ ▝▜▌ ▝▀▚▖  █ ▐▛▀▜▌▐▌   ▐▌        ▝▀▚▖▐▌   ▐▛▀▚▖  █  ▐▛▀▘  █
+▐▌   ▝▚▄▞▘▗▄▄▞▘  █  ▗▄█▄▖▐▌  ▐▌▗▄▄▞▘  █ ▐▌ ▐▌▐▙▄▄▖▐▙▄▄▖    ▗▄▄▞▘▝▚▄▄▖▐▌ ▐▌▗▄█▄▖▐▌    █
+                                                                                              
+I sure hope it works!
+                                                                                              
+"
+
+
+install () {
+  echo -e "
+                                                                                 
+  ▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▖ ▗▖   ▗▖       ▗▄▄▖  ▗▄▖  ▗▄▄▖▗▖ ▗▖ ▗▄▖  ▗▄▄▖▗▄▄▄▖ ▗▄▄▖
+    █  ▐▛▚▖▐▌▐▌     █ ▐▌ ▐▌▐▌   ▐▌       ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌▗▞▘▐▌ ▐▌▐▌   ▐▌   ▐▌   
+    █  ▐▌ ▝▜▌ ▝▀▚▖  █ ▐▛▀▜▌▐▌   ▐▌       ▐▛▀▘ ▐▛▀▜▌▐▌   ▐▛▚▖ ▐▛▀▜▌▐▌▝▜▌▐▛▀▀▘ ▝▀▚▖
+  ▗▄█▄▖▐▌  ▐▌▗▄▄▞▘  █ ▐▌ ▐▌▐▙▄▄▖▐▙▄▄▖    ▐▌   ▐▌ ▐▌▝▚▄▄▖▐▌ ▐▌▐▌ ▐▌▝▚▄▞▘▐▙▄▄▖▗▄▄▞▘
+                                                                                 
+  "
+
+  install_core () {
+    echo -e "
+                                                                    
+     ▗▄▄▖ ▗▄▖ ▗▄▄▖ ▗▄▄▄▖    ▗▄▄▖  ▗▄▖  ▗▄▄▖▗▖ ▗▖ ▗▄▖  ▗▄▄▖▗▄▄▄▖ ▗▄▄▖
+    ▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌       ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌▗▞▘▐▌ ▐▌▐▌   ▐▌   ▐▌   
+    ▐▌   ▐▌ ▐▌▐▛▀▚▖▐▛▀▀▘    ▐▛▀▘ ▐▛▀▜▌▐▌   ▐▛▚▖ ▐▛▀▜▌▐▌▝▜▌▐▛▀▀▘ ▝▀▚▖
+    ▝▚▄▄▖▝▚▄▞▘▐▌ ▐▌▐▙▄▄▖    ▐▌   ▐▌ ▐▌▝▚▄▄▖▐▌ ▐▌▐▌ ▐▌▝▚▄▞▘▐▙▄▄▖▗▄▄▞▘
+                                                                    
+    "
+
+    CORE="
+    acpilight
+    brightnessctl
+    btop
+    calibre
+    cantarell-fonts
+    capitaine-cursors
+    dunst
+    easyeffects
+    fd
+    feh
+    ferdium-bin
+    file-roller
+    firefox
+    fzf
+    ghostty
+    github-cli
+    gvfs
+    gvfs-mtp
+    imagemagick
+    iwd
+    lazygit
+    linux-headers
+    lsp-plugins
+    mpd
+    mpdscribble
+    mpv
+    neovim
+    network-manager-applet
+    networkmanager
+    nordic-darker-theme
+    nvidia-open-dkms
+    nvidia-settings
+    nwg-look
+    papirus-icon-theme
+    qbittorrent
+    ripgrep
+    rmpc
+    rofi
+    smartmontools
+    stow
+    syncthing
+    thunar
+    thunar-archive-plugin
+    trash-cli
+    ttf-ancient-fonts
+    ttf-atkinson-hyperlegible
+    ttf-jetbrains-mono-nerd
+    wget
+    yazi
+    yt-dlp
+    zoxide
+    openssh
+    wget
+    wireless_tools
+    wpa_supplicant"
+                                                                                                  
+    sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
+    sudo pacman -Syu
+    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+    yay -S --needed --noconfirm $LIST_OF_APPS
+    cd /home/$USER/
+    trash -v yay-bin
+  }
+
+  dotfiles () {
+    echo -e "
+                                           
+    ▗▄▄▄  ▗▄▖▗▄▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖   ▗▄▄▄▖ ▗▄▄▖
+    ▐▌  █▐▌ ▐▌ █  ▐▌     █  ▐▌   ▐▌   ▐▌   
+    ▐▌  █▐▌ ▐▌ █  ▐▛▀▀▘  █  ▐▌   ▐▛▀▀▘ ▝▀▚▖
+    ▐▙▄▄▀▝▚▄▞▘ █  ▐▌   ▗▄█▄▖▐▙▄▄▖▐▙▄▄▖▗▄▄▞▘
+                                           
+    "
+
+    yay -S --needed --noconfirm git trash-cli stow
+    cd /home/$USER/
+    trash .config/qtile .bashrc .Xresources .config/hypr .config/waybar
+    git clone https://github.com/ch1ebak/dotfiles
+    mv dotfiles .dotfiles
+    cd .dotfiles
+    stow . --adopt
+    cd /home/$USER/
+    trash -v /home/$USER/.bash_profile
+    chmod +x /home/$USER/.dotfiles/.config/rofi/modules/rofi-power-menu
+  }
+
+  sddm () {
+    echo -e "
+                         
+     ▗▄▄▖▗▄▄▄ ▗▄▄▄ ▗▖  ▗▖
+    ▐▌   ▐▌  █▐▌  █▐▛▚▞▜▌
+     ▝▀▚▖▐▌  █▐▌  █▐▌  ▐▌
+    ▗▄▄▞▘▐▙▄▄▀▐▙▄▄▀▐▌  ▐▌
+                         
+    "
+
+    yay -S --needed --noconfirm sddm qt6-svg
+    systemctl enable sddm
+    sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+    sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
+    echo "[Theme]
+    Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+  }
+
+  install_qtile () {
+    echo -e "
+
+    ▗▄▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖   ▗▄▄▄▖
+    ▐▌ ▐▌  █    █  ▐▌   ▐▌   
+    ▐▌ ▐▌  █    █  ▐▌   ▐▛▀▀▘
+    ▐▙▄▟▙▖ █  ▗▄█▄▖▐▙▄▄▖▐▙▄▄▖
+
+    "
+
+    QTILE_INSTALL="
+    picom
+    python-pip
+    python-psutil
+    qtile
+    qtile-extras-git
+    scrot
+    slock
+    xclip
+    xorg-server
+    xorg-xinit
+    xorg-xkill
+    xorg-xrandr
+    "
+
+    yay -S --needed --noconfirm $QTILE_INSTALL
+  }
+
+  install_hyprland () {
+    echo -e "
+
+    ▗▖ ▗▖▗▖  ▗▖▗▄▄▖ ▗▄▄▖ ▗▖    ▗▄▖ ▗▖  ▗▖▗▄▄▄ 
+    ▐▌ ▐▌ ▝▚▞▘ ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌▐▛▚▖▐▌▐▌  █
+    ▐▛▀▜▌  ▐▌  ▐▛▀▘ ▐▛▀▚▖▐▌   ▐▛▀▜▌▐▌ ▝▜▌▐▌  █
+    ▐▌ ▐▌  ▐▌  ▐▌   ▐▌ ▐▌▐▙▄▄▖▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀
+
+    "
+
+    HYPRLAND_INSTALL="
+    cliphist
+    egl-wayland
+    grim
+    hyprcursor
+    hypridle
+    hyprland
+    hyprlock
+    hyprpolkitagent
+    qt5-wayland
+    swaybg
+    waybar
+    xdg-desktop-portal-hyprland"
+
+    yay -S --needed --noconfirm $LIST_OF_APPS
+  }
+
+  install_mango () {
+    echo -e "
+
+    ▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖ ▗▄▄▖ ▗▄▖ ▗▖ ▗▖ ▗▄▄▖
+    ▐▛▚▞▜▌▐▌ ▐▌▐▛▚▖▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌   
+    ▐▌  ▐▌▐▛▀▜▌▐▌ ▝▜▌▐▌▝▜▌▐▌ ▐▌▐▌ ▐▌▐▌   
+    ▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▝▚▄▞▘▝▚▄▞▘▐▙█▟▌▝▚▄▄▖
+
+    "
+
+    LIST_OF_APPS="
+    cliphist
+    egl-wayland
+    grim
+    mangowc-git
+    swaybg
+    hypridle
+    hyprlock
+    qt5-wayland
+    waybar
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
+    xfce-polkit"
+
+    yay -S --needed --noconfirm $LIST_OF_APPS
+  }
+
+  install_gaming () {
+    echo -e "
+
+     ▗▄▄▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖ ▗▄▄▖
+    ▐▌   ▐▌ ▐▌▐▛▚▞▜▌  █  ▐▛▚▖▐▌▐▌   
+    ▐▌▝▜▌▐▛▀▜▌▐▌  ▐▌  █  ▐▌ ▝▜▌▐▌▝▜▌
+    ▝▚▄▞▘▐▌ ▐▌▐▌  ▐▌▗▄█▄▖▐▌  ▐▌▝▚▄▞▘
+
+    "
+
+    GAMING_APPS="
+    heroic-games-launcher-bin
+    lib32-nvidia-utils
+    lib32-vulkan-icd-loader
+    lutris
+    nvidia-open-dkms
+    nvidia-settings
+    nvidia-utils
+    proton-ge-custom-bin
+    protontricks
+    steam
+    vulkan-icd-loader
+    wine-staging"
+
+    GAMING_LIBRARIES="giflib lib32-giflib gnutls lib32-gnutls v4l-utils lib32-v4l-utils libpulse lib32-libpulse alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib sqlite lib32-sqlite libxcomposite lib32-libxcomposite ocl-icd lib32-ocl-icd libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader sdl2 lib32-sdl2"
+
+    yay -S --needed $GAMING_APPS
+    yay -S --needed --asdeps $GAMING_LIBRARIES
+  }
+
+  install_vm () {
+    echo -e "
+
+    ▗▖  ▗▖▗▄▄▄▖▗▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▄▖ 
+    ▐▌  ▐▌  █  ▐▌ ▐▌ █  ▐▛▚▞▜▌▐▌ ▐▌▐▛▚▖▐▌▐▌   ▐▌   ▐▌ ▐▌
+    ▐▌  ▐▌  █  ▐▛▀▚▖ █  ▐▌  ▐▌▐▛▀▜▌▐▌ ▝▜▌▐▌▝▜▌▐▛▀▀▘▐▛▀▚▖
+     ▝▚▞▘ ▗▄█▄▖▐▌ ▐▌ █  ▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌
+
+    "
+
+    VIRTMANAGER="
+    dmidecode
+    dnsmasq
+    iptables-nft
+    libvirt
+    qemu-base
+    virt-manager
+    "
+
+    yay -S --needed $VIRTMANAGER
+    systemctl enable libvirtd
+    systemctl start libvirtd
+    sudo usermod -aG libvirt $USER
+
+    echo -e "Reboot to apply the changes."
+  }
+
+  while true; do
+      options=("Install Core" "Clone Dotfiles" "SDDM" "Install Qtile" "Install Hyprland" "Install Mango" "Install Gaming" "Install Virt-Manager" "Back")
+
+      echo "Choose an option: "
+      select opt in "${options[@]}"; do
+          case $REPLY in
+              1) install_core; break ;;
+              2) dotfiles; break ;;
+              3) sddm; break ;;
+              4) install_qtile; break ;;
+              5) install_hyprland; break ;;
+              6) install_mango; break ;;
+              7) install_gaming; break ;;
+              8) install_vm; break ;;
+              9) break 2 ;;
+              *) echo "Invalid option $REPLY" >&2
+          esac
+      done
+  done
+}
+
+
+remove () {
+  echo -e "
+                                                                              
+  ▗▄▄▖ ▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖    ▗▄▄▖  ▗▄▖  ▗▄▄▖▗▖ ▗▖ ▗▄▖  ▗▄▄▖▗▄▄▄▖ ▗▄▄▖
+  ▐▌ ▐▌▐▌   ▐▛▚▞▜▌▐▌ ▐▌▐▌  ▐▌▐▌       ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌▗▞▘▐▌ ▐▌▐▌   ▐▌   ▐▌   
+  ▐▛▀▚▖▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▐▛▀▀▘    ▐▛▀▘ ▐▛▀▜▌▐▌   ▐▛▚▖ ▐▛▀▜▌▐▌▝▜▌▐▛▀▀▘ ▝▀▚▖
+  ▐▌ ▐▌▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘ ▝▚▞▘ ▐▙▄▄▖    ▐▌   ▐▌ ▐▌▝▚▄▄▖▐▌ ▐▌▐▌ ▐▌▝▚▄▞▘▐▙▄▄▖▗▄▄▞▘
+                                                                              
+  "
+
+  remove_qtile () {
+    echo -e "
+                                                                 
+    ▗▄▄▖ ▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖    ▗▄▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖   ▗▄▄▄▖
+    ▐▌ ▐▌▐▌   ▐▛▚▞▜▌▐▌ ▐▌▐▌  ▐▌▐▌       ▐▌ ▐▌  █    █  ▐▌   ▐▌   
+    ▐▛▀▚▖▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▐▛▀▀▘    ▐▌ ▐▌  █    █  ▐▌   ▐▛▀▀▘
+    ▐▌ ▐▌▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘ ▝▚▞▘ ▐▙▄▄▖    ▐▙▄▟▙▖ █  ▗▄█▄▖▐▙▄▄▖▐▙▄▄▖
+                                                                 
+    "
+
+    QTILE_REMOVE="
+    picom
+    python-pip
+    python-psutil
+    qtile
+    qtile-extras-git
+    scrot
+    slock
+    xclip
+    xorg-server
+    xorg-xinit
+    xorg-xkill
+    xorg-xrandr
+    "
+
+    yay -Rns $QTILE_REMOVE
+  }
+
+  remove_hyprland () {
+    echo -e "
+                                                                                  
+    ▗▄▄▖ ▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖    ▗▖ ▗▖▗▖  ▗▖▗▄▄▖ ▗▄▄▖ ▗▖    ▗▄▖ ▗▖  ▗▖▗▄▄▄ 
+    ▐▌ ▐▌▐▌   ▐▛▚▞▜▌▐▌ ▐▌▐▌  ▐▌▐▌       ▐▌ ▐▌ ▝▚▞▘ ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌▐▛▚▖▐▌▐▌  █
+    ▐▛▀▚▖▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▐▛▀▀▘    ▐▛▀▜▌  ▐▌  ▐▛▀▚▖▐▛▀▘ ▐▌   ▐▛▀▜▌▐▌ ▝▜▌▐▌  █
+    ▐▌ ▐▌▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘ ▝▚▞▘ ▐▙▄▄▖    ▐▌ ▐▌  ▐▌  ▐▌ ▐▌▐▌   ▐▙▄▄▖▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀
+                                                                                  
+    "
+
+    HYPRLAND_REMOVE="
+    cliphist
+    grim
+    hyprcursor
+    hypridle
+    hyprland
+    hyprlock
+    hyprpaper
+    hyprpolkitagent
+    qt5-wayland
+    waybar
+    xdg-desktop-portal-hyprland"
+
+    yay -Rns $HYPRLAND_REMOVE
+  }
+
+  remove_vm () {
+    echo -e "
+                                                                                            
+    ▗▄▄▖ ▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖▗▄▄▄▖    ▗▖  ▗▖▗▄▄▄▖▗▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖▗▄▄▖ 
+    ▐▌ ▐▌▐▌   ▐▛▚▞▜▌▐▌ ▐▌▐▌  ▐▌▐▌       ▐▌  ▐▌  █  ▐▌ ▐▌ █  ▐▛▚▞▜▌▐▌ ▐▌▐▛▚▖▐▌▐▌   ▐▌   ▐▌ ▐▌
+    ▐▛▀▚▖▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▐▛▀▀▘    ▐▌  ▐▌  █  ▐▛▀▚▖ █  ▐▌  ▐▌▐▛▀▜▌▐▌ ▝▜▌▐▌▝▜▌▐▛▀▀▘▐▛▀▚▖
+    ▐▌ ▐▌▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘ ▝▚▞▘ ▐▙▄▄▖     ▝▚▞▘ ▗▄█▄▖▐▌ ▐▌ █  ▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌
+                                                                                            
+    "
+
+    VIRTMANAGER_REMOVE="
+    dmidecode
+    dnsmasq
+    libvirt
+    qemu-base
+    virt-manager
+    "
+
+    systemctl stop libvirtd
+    systemctl disable libvirtd
+    yay -S iptables
+    yay -Rns $VIRTMANAGER_REMOVE
+  }
+
+  while true; do
+      options=("Remove Qtile" "Remove Hyprland" "Remove Virt-Manager" "Back")
+
+      echo "Choose and option: "
+      select opt in "${options[@]}"; do
+          case $REPLY in
+              1) remove_qtile; break ;;
+              2) remove_hyprland; break ;;
+              3) remove_vm; break ;;
+              4) break 2 ;;
+              *) echo "Invalid option $REPLY" >&2
+          esac
+      done
+  done
+}
+
+
+system () {
+  echo -e "
+                                                                                                
+   ▗▄▄▖▗▖  ▗▖▗▄▄▖▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖    ▗▖  ▗▖ ▗▄▖ ▗▄▄▄▖▗▖  ▗▖▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖ ▗▄▖ ▗▖  ▗▖ ▗▄▄▖▗▄▄▄▖
+  ▐▌    ▝▚▞▘▐▌     █  ▐▌   ▐▛▚▞▜▌    ▐▛▚▞▜▌▐▌ ▐▌  █  ▐▛▚▖▐▌  █  ▐▌   ▐▛▚▖▐▌▐▌ ▐▌▐▛▚▖▐▌▐▌   ▐▌   
+   ▝▀▚▖  ▐▌  ▝▀▚▖  █  ▐▛▀▀▘▐▌  ▐▌    ▐▌  ▐▌▐▛▀▜▌  █  ▐▌ ▝▜▌  █  ▐▛▀▀▘▐▌ ▝▜▌▐▛▀▜▌▐▌ ▝▜▌▐▌   ▐▛▀▀▘
+  ▗▄▄▞▘  ▐▌ ▗▄▄▞▘  █  ▐▙▄▄▖▐▌  ▐▌    ▐▌  ▐▌▐▌ ▐▌▗▄█▄▖▐▌  ▐▌  █  ▐▙▄▄▖▐▌  ▐▌▐▌ ▐▌▐▌  ▐▌▝▚▄▄▖▐▙▄▄▖
+                                                                                                
+  "
+
+  update () {
+    echo -e "
+                                 
+    ▗▖ ▗▖▗▄▄▖ ▗▄▄▄  ▗▄▖▗▄▄▄▖▗▄▄▄▖
+    ▐▌ ▐▌▐▌ ▐▌▐▌  █▐▌ ▐▌ █  ▐▌   
+    ▐▌ ▐▌▐▛▀▘ ▐▌  █▐▛▀▜▌ █  ▐▛▀▀▘
+    ▝▚▄▞▘▐▌   ▐▙▄▄▀▐▌ ▐▌ █  ▐▙▄▄▖
+                                 
+    "
+
+    yay -Syu
+  }
+
+  cleanup () {
+    echo -e "
+                                        
+     ▗▄▄▖▗▖   ▗▄▄▄▖ ▗▄▖ ▗▖  ▗▖▗▖ ▗▖▗▄▄▖ 
+    ▐▌   ▐▌   ▐▌   ▐▌ ▐▌▐▛▚▖▐▌▐▌ ▐▌▐▌ ▐▌
+    ▐▌   ▐▌   ▐▛▀▀▘▐▛▀▜▌▐▌ ▝▜▌▐▌ ▐▌▐▛▀▘ 
+    ▝▚▄▄▖▐▙▄▄▖▐▙▄▄▖▐▌ ▐▌▐▌  ▐▌▝▚▄▞▘▐▌   
+                                        
+    "
+
+    cleanup_system() {
+        printf "%b\n" "Performing system cleanup..."
+        yay -Sc --noconfirm
+        yay -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1
+    }
+
+    common_cleanup() {
+        if [ -d /var/tmp ]; then
+            find /var/tmp -type f -atime +5 -delete
+        fi
+        if [ -d /tmp ]; then
+            find /tmp -type f -atime +5 -delete
+        fi
+        if [ -d /var/log ]; then
+            find /var/log -type f -name "*.log" -exec truncate -s 0 {} \;
+        fi
+        journalctl --vacuum-time=3d
+    }
+
+    clean_data() {
+        printf "%b" "Clean up old cache files and empty the trash? (y/N): "
+        read -r clean_response
+        case $clean_response in
+            y|Y)
+                printf "%b\n" "Cleaning up old cache files and emptying trash..."
+                if [ -d "$HOME/.cache" ]; then
+                    find "$HOME/.cache/" -type f -atime +5 -delete
+                fi
+                if [ -d "$HOME/.local/share/Trash" ]; then
+                    find "$HOME/.local/share/Trash" -mindepth 1 -delete
+                fi
+                printf "%b\n" "Cache and trash cleanup completed."
+                ;;
+            *)
+                printf "%b\n" "Skipping cache and trash cleanup."
+                ;;
+        esac
+    }
+
+    trash-empty
+    cleanup_system
+    common_cleanup
+    clean_data
+  }
+
+  while true; do
+      options=("Update System" "System Cleanup" "Back")
+
+      echo "Choose an option: "
+      select opt in "${options[@]}"; do
+          case $REPLY in
+              1) update; break ;;
+              2) cleanup; break ;;
+              3) break 2 ;;
+              *) echo "Invalid option $REPLY" >&2
+          esac
+      done
+  done
+}
+
+
+while true; do
+    options=("Install Packages" "Remove Packages" "System Maintenance" "Quit")
+
+    echo "Choose an option: "
+    select opt in "${options[@]}"; do
+        case $REPLY in
+            1) install; break ;;
+            2) remove; break ;;
+            3) system; break ;;
+            4) break 2 ;;
+            *) echo "Invalid option $REPLY" >&2
+        esac
+    done
+done
+
+
+echo -e "
+                                                                                              
+ ▗▄▖ ▗▖   ▗▖       ▗▄▄▄  ▗▄▖ ▗▖  ▗▖▗▄▄▄▖
+▐▌ ▐▌▐▌   ▐▌       ▐▌  █▐▌ ▐▌▐▛▚▖▐▌▐▌   
+▐▛▀▜▌▐▌   ▐▌       ▐▌  █▐▌ ▐▌▐▌ ▝▜▌▐▛▀▀▘
+▐▌ ▐▌▐▙▄▄▖▐▙▄▄▖    ▐▙▄▄▀▝▚▄▞▘▐▌  ▐▌▐▙▄▄▖
+                                                                                              
+Enjoy!
+                                                                                              
+"
