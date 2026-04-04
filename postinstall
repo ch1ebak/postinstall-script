@@ -50,6 +50,7 @@ install () {
     capitaine-cursors
     dunst
     easyeffects
+		emacs
     fd
     feh
     ferdium-bin
@@ -62,13 +63,11 @@ install () {
     gvfs-mtp
     imagemagick
     iwd
-    lazygit
     linux-headers
     lsp-plugins
     mpd
     mpdscribble
     mpv
-    neovim
     network-manager-applet
     networkmanager
     nordic-darker-theme
@@ -92,7 +91,6 @@ install () {
     wget
     yazi
     yt-dlp
-    zoxide
     openssh
     wget
     wireless_tools
