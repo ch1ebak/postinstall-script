@@ -50,7 +50,7 @@ install () {
     capitaine-cursors
     dunst
     easyeffects
-		emacs
+    emacs
     fd
     feh
     ferdium-bin
@@ -75,6 +75,7 @@ install () {
     nvidia-settings
     nwg-look
     papirus-icon-theme
+    pcmanfm
     qbittorrent
     ripgrep
     rmpc
@@ -82,8 +83,6 @@ install () {
     smartmontools
     stow
     syncthing
-    thunar
-    thunar-archive-plugin
     trash-cli
     ttf-ancient-fonts
     ttf-atkinson-hyperlegible
@@ -99,7 +98,7 @@ install () {
     sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
     sudo pacman -Syu
     sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
-    yay -S --needed --noconfirm $LIST_OF_APPS
+    yay -S --needed --noconfirm $CORE
     cd /home/$USER/
     trash -v yay-bin
   }
@@ -200,7 +199,7 @@ install () {
     waybar
     xdg-desktop-portal-hyprland"
 
-    yay -S --needed --noconfirm $LIST_OF_APPS
+    yay -S --needed --noconfirm $HYPRLAND_INSTALL
   }
 
   install_mango () {
@@ -214,7 +213,7 @@ install () {
     ${NC}
     "
 
-    LIST_OF_APPS="
+    MANGO_INSTALL="
     cliphist
     egl-wayland
     grim
@@ -229,7 +228,7 @@ install () {
     xdg-desktop-portal-gtk
     xfce-polkit"
 
-    yay -S --needed --noconfirm $LIST_OF_APPS
+    yay -S --needed --noconfirm $MANGO_INSTALL
   }
 
   install_gaming () {
