@@ -65,8 +65,6 @@ install () {
     iwd
     linux-headers
     lsp-plugins
-    mpd
-    mpdscribble
     mpv
     network-manager-applet
     networkmanager
@@ -78,7 +76,6 @@ install () {
     pcmanfm
     qbittorrent
     ripgrep
-    rmpc
     rofi
     smartmontools
     stow
@@ -88,9 +85,9 @@ install () {
     ttf-atkinson-hyperlegible
     ttf-jetbrains-mono-nerd
     wget
-    yazi
     yt-dlp
     openssh
+		waves-bin
     wget
     wireless_tools
     wpa_supplicant"
@@ -338,16 +335,13 @@ remove () {
     QTILE_REMOVE="
     picom
     python-pip
-    python-psutil
     qtile
     qtile-extras-git
     scrot
     slock
     xclip
-    xorg-server
     xorg-xinit
     xorg-xkill
-    xorg-xrandr
     "
 
     yay -Rns $QTILE_REMOVE
