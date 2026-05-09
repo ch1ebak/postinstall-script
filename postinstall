@@ -438,6 +438,7 @@ system () {
     ${NC}
     "
 
+    sudo pacman -Syu
     yay -Syu
   }
 
