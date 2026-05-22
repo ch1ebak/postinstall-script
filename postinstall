@@ -214,7 +214,7 @@ install () {
     cliphist
     egl-wayland
     grim
-    mangowc-git
+    mangowm
     swaybg
     hypridle
     hyprlock
@@ -223,7 +223,7 @@ install () {
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
-    xfce-polkit"
+    polkit-gnome"
 
     yay -S --needed --noconfirm $MANGO_INSTALL
   }
