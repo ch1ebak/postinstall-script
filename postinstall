@@ -42,7 +42,6 @@ install () {
     "
 
     CORE="
-    acpilight
     brightnessctl
     btop
     calibre
@@ -53,16 +52,13 @@ install () {
     emacs
     fd
     feh
-    ferdium-bin
     file-roller
     firefox
     fzf
-    ghostty
     github-cli
     gvfs
     gvfs-mtp
     imagemagick
-    iwd
     linux-headers
     lsp-plugins
     mpv
@@ -77,27 +73,35 @@ install () {
     qbittorrent
     ripgrep
     rofi
-    smartmontools
     stow
     syncthing
     trash-cli
-    ttf-ancient-fonts
     ttf-atkinson-hyperlegible
     ttf-jetbrains-mono-nerd
     wget
     yt-dlp
-    openssh
+		wezterm
+    wget"
+
+		AUR="
+    acpilight
+    ferdium-bin
+    ttf-ancient-fonts
 		waves-bin
-    wget
-    wireless_tools
-    wpa_supplicant"
+		zen-browser-bin 
+		"
                                                                                                   
     sudo sed -Ei 's/^#(Color)$/\1\nILoveCandy/;s/^#(ParallelDownloads).*/\1 = 5/' /etc/pacman.conf
     sudo pacman -Syu
-    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
-    yay -S --needed --noconfirm $CORE
+		echo "System updated."
+    sudo pacman -S --needed --noconfirm $CORE
+		echo "Core installed."
+		sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
+		echo "Paru setup completed."
+    paru -S --needed --noconfirm $AUR
     cd /home/$USER/
-    trash -v yay-bin
+    trash -v paru
+		echo "Paru install completed."
   }
 
   dotfiles () {
@@ -111,7 +115,7 @@ install () {
     ${NC}
     "
 
-    yay -S --needed --noconfirm git trash-cli stow
+    paru -S --needed --noconfirm git trash-cli stow
     cd /home/$USER/
     trash .config/qtile .bashrc .Xresources .config/hypr .config/waybar
     git clone https://github.com/ch1ebak/dotfiles
@@ -134,7 +138,7 @@ install () {
     ${NC}
     "
 
-    yay -S --needed --noconfirm sddm qt6-svg
+    paru -S --needed --noconfirm sddm qt6-svg
     systemctl enable sddm
     sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
     sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
@@ -168,7 +172,7 @@ install () {
     xorg-xrandr
     "
 
-    yay -S --needed --noconfirm $QTILE_INSTALL
+    paru -S --needed --noconfirm $QTILE_INSTALL
   }
 
   install_hyprland () {
@@ -196,7 +200,7 @@ install () {
     waybar
     xdg-desktop-portal-hyprland"
 
-    yay -S --needed --noconfirm $HYPRLAND_INSTALL
+    paru -S --needed --noconfirm $HYPRLAND_INSTALL
   }
 
   install_mango () {
@@ -225,7 +229,7 @@ install () {
     xdg-desktop-portal-gtk
     polkit-gnome"
 
-    yay -S --needed --noconfirm $MANGO_INSTALL
+    paru -S --needed --noconfirm $MANGO_INSTALL
   }
 
   install_gaming () {
@@ -240,10 +244,10 @@ install () {
     "
 
     GAMING_APPS="
+		dkms
     heroic-games-launcher-bin
     lib32-nvidia-utils
     lib32-vulkan-icd-loader
-    lutris
     nexusmods-app-bin
     nvidia-open-dkms
     nvidia-settings
@@ -254,10 +258,7 @@ install () {
     vulkan-icd-loader
     wine-staging"
 
-    GAMING_LIBRARIES="giflib lib32-giflib gnutls lib32-gnutls v4l-utils lib32-v4l-utils libpulse lib32-libpulse alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib sqlite lib32-sqlite libxcomposite lib32-libxcomposite ocl-icd lib32-ocl-icd libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader sdl2 lib32-sdl2"
-
-    yay -S --needed $GAMING_APPS
-    yay -S --needed --asdeps $GAMING_LIBRARIES
+    paru -S --needed $GAMING_APPS
   }
 
   install_vm () {
@@ -280,7 +281,7 @@ install () {
     virt-manager
     "
 
-    yay -S --needed $VIRTMANAGER
+    paru -S --needed $VIRTMANAGER
     systemctl enable libvirtd
     systemctl start libvirtd
     sudo usermod -aG libvirt $USER
@@ -344,7 +345,7 @@ remove () {
     xorg-xkill
     "
 
-    yay -Rns $QTILE_REMOVE
+    paru -Rns $QTILE_REMOVE
   }
 
   remove_hyprland () {
@@ -371,7 +372,7 @@ remove () {
     waybar
     xdg-desktop-portal-hyprland"
 
-    yay -Rns $HYPRLAND_REMOVE
+    paru -Rns $HYPRLAND_REMOVE
   }
 
   remove_vm () {
@@ -395,8 +396,8 @@ remove () {
 
     systemctl stop libvirtd
     systemctl disable libvirtd
-    yay -S iptables
-    yay -Rns $VIRTMANAGER_REMOVE
+    paru -S iptables
+    paru -Rns $VIRTMANAGER_REMOVE
   }
 
   while true; do
@@ -439,7 +440,7 @@ system () {
     "
 
     sudo pacman -Syu
-    yay -Syu
+    paru -Syu
   }
 
   cleanup () {
@@ -455,8 +456,8 @@ system () {
 
     cleanup_system() {
         printf "%b\n" "Performing system cleanup..."
-        yay -Sc --noconfirm
-        yay -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1
+        paru -Sc --noconfirm
+        paru -Rns $(pacman -Qtdq) --noconfirm > /dev/null 2>&1
     }
 
     common_cleanup() {
