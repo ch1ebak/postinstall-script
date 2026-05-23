@@ -64,7 +64,6 @@ install () {
     mpv
     network-manager-applet
     networkmanager
-    nordic-darker-theme
     nvidia-open-dkms
     nvidia-settings
     nwg-look
